@@ -41,7 +41,15 @@ let myAge:number = 23;
 let pi:number = 3.147;
 let myNegVal:number = -5
 
-let invalidResult: number = myAge + " years ";
+// let invalidResult: number = myAge + " years ";
+
+// let invalidValue: number = "123";
+
+// let computedValue: number = Math.sqrt(16);
+
+//! Home work
+// let nanValue: number = NaN;
+
 console.log(invalidResult);
 
 
