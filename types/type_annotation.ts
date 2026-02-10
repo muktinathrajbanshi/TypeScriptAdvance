@@ -13,12 +13,16 @@
 //? or function parameter declaration. There can be a space after the clone.
 
 
-let myFavNum:number = 10;
-let myFullName:string = "Muktinath Rajbanshi";
+// let myFavNum:number = 10;
+// let myFullName:string = "Muktinath Rajbanshi";
 
 // myFavNum = "mukti";
 
-console.log(myFavNum.toString());
+// console.log(myFavNum.toString());
+
+// let sum1 = myFavNum + 10
+// console.log(sum1);
+
 
 
 // * -------------------------------------------------------
@@ -31,6 +35,15 @@ console.log(myFavNum.toString());
 //? Number types in TypeScript support arithmetic operations such as 
 //? addition (+), subtraction (-), multiplication (*), and division (/).
 //? The result of these operations on numbers is also of type number.
+
+let myFavNum:number = 5;
+let myAge:number = 23;
+let pi:number = 3.147;
+let myNegVal:number = -5
+
+let invalidResult: number = myAge + " years ";
+console.log(invalidResult);
+
 
 //! Here are some practice questions related to string types iin TypeScript:
 
