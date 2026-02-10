@@ -29,3 +29,14 @@
 //? Create two variables firstName and lastName of type string and assign them your first name and 
 //? last name, respectively. Concatenate the two variables and store result in a variable called 
 //? fullName.
+
+//* todo 👉 String Length:
+//? Declare a variable sentence of type string and assign it a sentence of your choice. Find the 
+//? length of the string and store it in a variable called sentenceLength
+
+//* todo 👉 Uppercase and Lowercase
+//? Declare a variable text of type string and assign it a sentence of your choice. Convert the
+//? entire sentence to uppercase and store the result in a variable called uppercaseText. Then
+//? convert the entire sentence to lowercase and store the result in a variable called lowercaseText
+
+
