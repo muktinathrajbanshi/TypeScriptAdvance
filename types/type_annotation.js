@@ -80,11 +80,14 @@
 // todo 👉 String Comparison:
 //? Declare two variables str1 and str2 of type string and assign them different sentences. 
 //? Compare the two strings and store the result (true or false) in a variable called areEqual.
-var str1 = "Muktinath";
-var str2 = "Rajbanshi";
-var areEqual = (str1 === str2);
-console.log(areEqual);
+// let str1:string = "Muktinath";
+// let str2:string = "Rajbanshi";
+// let areEqual:boolean = (str1 === str2);
+// console.log(areEqual);
 // todo 👉 String Template:
 //? Declare variables product and price of type string and number, respectively. Create a string 
 //? using template literals to display the product and its price in the format "The product {product}
 //? is priced at {price} dollars. "
+var product = "Apple";
+var price = 280;
+console.log("The product ".concat(product, " is priced at ").concat(price, " dollars."));
