@@ -137,8 +137,8 @@
 //? using template literals to display the product and its price in the format "The product {product}
 //? is priced at {price} dollars. "
 
-let product:string = "Apple";
-let price:number = 280;
+// let product:string = "Apple";
+// let price:number = 280;
 
-console.log(`The product ${product} is priced at ${price} dollars.`);
+// console.log(`The product ${product} is priced at ${price} dollars.`);
 
