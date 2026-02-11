@@ -65,6 +65,11 @@ console.log(sentenceLength);
 //? Declare a variable text of type string and assign it a sentence of your choice. Convert the
 //? entire sentence to uppercase and store the result in a variable called uppercaseText. Then
 //? convert the entire sentence to lowercase and store the result in a variable called lowercaseText
+var text = "please subscribe my channel";
+var uppercaseText = text.toUpperCase();
+var lowercaseText = text.toLowerCase();
+console.log(uppercaseText);
+console.log(lowercaseText);
 //! Home Work Time 🙅‍♂️
 // todo 👉 Substring:
 //? Declare a variable longText of type string and assign it a long sentence Extract the first 

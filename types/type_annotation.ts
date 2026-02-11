@@ -102,6 +102,15 @@ console.log(sentenceLength);
 //? entire sentence to uppercase and store the result in a variable called uppercaseText. Then
 //? convert the entire sentence to lowercase and store the result in a variable called lowercaseText
 
+let text:string = "please subscribe my channel"
+let uppercaseText:string = text.toUpperCase();
+let lowercaseText:string = text.toLowerCase();
+
+console.log(uppercaseText);
+console.log(lowercaseText);
+
+
+
 
 //! Home Work Time 🙅‍♂️
 // todo 👉 Substring:
