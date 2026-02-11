@@ -29,6 +29,15 @@
 //? In JS we can't read the whole numbers beyond 2 raise to power 53
 // const maxNumber = Number.MAX_SAFE_INTEGER;
 var bigNumber = 9007199254740991n;
-console.log(bigNumber);
+// console.log(bigNumber);
 var anotherBigNumber = BigInt("90071992547409916");
-console.log(anotherBigNumber);
+// console.log(anotherBigNumber);
+//! Assignment
+var sum = bigNumber + anotherBigNumber;
+console.log(sum);
+var differece = bigNumber - anotherBigNumber;
+console.log(differece);
+var product = bigNumber * anotherBigNumber;
+console.log(product);
+var division = bigNumber / anotherBigNumber;
+console.log(division);
