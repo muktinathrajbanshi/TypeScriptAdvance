@@ -27,17 +27,18 @@
 //? by the regular number type.
 //? BigInt literals are written by appending the n suffix to an integer literal.
 //? In JS we can't read the whole numbers beyond 2 raise to power 53
-// const maxNumber = Number.MAX_SAFE_INTEGER;
-var bigNumber = 9007199254740991n;
+var maxNumber = Number.MAX_SAFE_INTEGER;
+console.log(maxNumber);
+// let bigNumber:bigint= 9007199254740991n
 // console.log(bigNumber);
-var anotherBigNumber = BigInt("90071992547409916");
+// let anotherBigNumber = BigInt("90071992547409916");
 // console.log(anotherBigNumber);
 //! Assignment
-var sum = bigNumber + anotherBigNumber;
-console.log(sum);
-var differece = bigNumber - anotherBigNumber;
-console.log(differece);
-var product = bigNumber * anotherBigNumber;
-console.log(product);
-var division = bigNumber / anotherBigNumber;
-console.log(division);
+// let sum = bigNumber + anotherBigNumber;
+// console.log(sum);
+// let differece = bigNumber - anotherBigNumber;
+// console.log(differece);
+// let product = bigNumber * anotherBigNumber;
+// console.log(product)
+// let division = bigNumber / anotherBigNumber;
+// console.log(division);
