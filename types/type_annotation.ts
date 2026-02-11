@@ -117,13 +117,20 @@
 //? Declare a variable longText of type string and assign it a long sentence Extract the first 
 //? 10 characters from longText and store them in a variable called shortText.
 
-let longText:string = "please subscribe my channel"
-let shortText:string = longText.slice(0, 10);
-console.log(shortText);
+// let longText:string = "please subscribe my channel"
+// let shortText:string = longText.slice(0, 10);
+// console.log(shortText);
 
 // todo 👉 String Comparison:
 //? Declare two variables str1 and str2 of type string and assign them different sentences. 
 //? Compare the two strings and store the result (true or false) in a variable called areEqual.
+
+let str1:string = "Muktinath";
+let str2:string = "Rajbanshi";
+
+let areEqual:boolean = (str1 === str2);
+console.log(areEqual);
+
 
 // todo 👉 String Template:
 //? Declare variables product and price of type string and number, respectively. Create a string 
