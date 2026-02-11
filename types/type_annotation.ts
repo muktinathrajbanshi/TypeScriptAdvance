@@ -80,21 +80,21 @@
 //? last name, respectively. Concatenate the two variables and store result in a variable called 
 //? fullName.
 
-let myFullName = "muktinath rajbanshi"
-let myFirstName = "muktinath"
-let myLastName = "rajbanshi"
+// let myFullName = "muktinath rajbanshi"
+// let myFirstName = "muktinath"
+// let myLastName = "rajbanshi"
 
 
-myFullName = myFirstName + myLastName
-console.log(myFullName);
+// myFullName = myFirstName + myLastName
+// console.log(myFullName);
 
 //* todo 👉 String Length:
 //? Declare a variable sentence of type string and assign it a sentence of your choice. Find the 
 //? length of the string and store it in a variable called sentenceLength
 
-let sentence:string = "please subscribe my channel"
-let sentenceLength:number = sentence.length;
-console.log(sentenceLength);
+// let sentence:string = "please subscribe my channel"
+// let sentenceLength:number = sentence.length;
+// console.log(sentenceLength);
 
 
 //* todo 👉 Uppercase and Lowercase
@@ -102,12 +102,12 @@ console.log(sentenceLength);
 //? entire sentence to uppercase and store the result in a variable called uppercaseText. Then
 //? convert the entire sentence to lowercase and store the result in a variable called lowercaseText
 
-let text:string = "please subscribe my channel"
-let uppercaseText:string = text.toUpperCase();
-let lowercaseText:string = text.toLowerCase();
+// let text:string = "please subscribe my channel"
+// let uppercaseText:string = text.toUpperCase();
+// let lowercaseText:string = text.toLowerCase();
 
-console.log(uppercaseText);
-console.log(lowercaseText);
+// console.log(uppercaseText);
+// console.log(lowercaseText);
 
 
 
@@ -116,6 +116,10 @@ console.log(lowercaseText);
 // todo 👉 Substring:
 //? Declare a variable longText of type string and assign it a long sentence Extract the first 
 //? 10 characters from longText and store them in a variable called shortText.
+
+let longText:string = "please subscribe my channel"
+let shortText:string = longText.slice(0, 10);
+console.log(shortText);
 
 // todo 👉 String Comparison:
 //? Declare two variables str1 and str2 of type string and assign them different sentences. 

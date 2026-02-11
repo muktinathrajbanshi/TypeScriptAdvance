@@ -50,30 +50,33 @@
 //? Create two variables firstName and lastName of type string and assign them your first name and 
 //? last name, respectively. Concatenate the two variables and store result in a variable called 
 //? fullName.
-var myFullName = "muktinath rajbanshi";
-var myFirstName = "muktinath";
-var myLastName = "rajbanshi";
-myFullName = myFirstName + myLastName;
-console.log(myFullName);
+// let myFullName = "muktinath rajbanshi"
+// let myFirstName = "muktinath"
+// let myLastName = "rajbanshi"
+// myFullName = myFirstName + myLastName
+// console.log(myFullName);
 //* todo 👉 String Length:
 //? Declare a variable sentence of type string and assign it a sentence of your choice. Find the 
 //? length of the string and store it in a variable called sentenceLength
-var sentence = "please subscribe my channel";
-var sentenceLength = sentence.length;
-console.log(sentenceLength);
+// let sentence:string = "please subscribe my channel"
+// let sentenceLength:number = sentence.length;
+// console.log(sentenceLength);
 //* todo 👉 Uppercase and Lowercase
 //? Declare a variable text of type string and assign it a sentence of your choice. Convert the
 //? entire sentence to uppercase and store the result in a variable called uppercaseText. Then
 //? convert the entire sentence to lowercase and store the result in a variable called lowercaseText
-var text = "please subscribe my channel";
-var uppercaseText = text.toUpperCase();
-var lowercaseText = text.toLowerCase();
-console.log(uppercaseText);
-console.log(lowercaseText);
+// let text:string = "please subscribe my channel"
+// let uppercaseText:string = text.toUpperCase();
+// let lowercaseText:string = text.toLowerCase();
+// console.log(uppercaseText);
+// console.log(lowercaseText);
 //! Home Work Time 🙅‍♂️
 // todo 👉 Substring:
 //? Declare a variable longText of type string and assign it a long sentence Extract the first 
 //? 10 characters from longText and store them in a variable called shortText.
+var longText = "please subscribe my channel";
+var shortText = longText.slice(0, 10);
+console.log(shortText);
 // todo 👉 String Comparison:
 //? Declare two variables str1 and str2 of type string and assign them different sentences. 
 //? Compare the two strings and store the result (true or false) in a variable called areEqual.
