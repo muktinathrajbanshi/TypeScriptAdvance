@@ -37,14 +37,23 @@
 //! Homework 🕵️‍♂️
 //? 1: Create a function called calculateAverage that takes an array of numbers as a parameter and
 //? returns the average of those numbers
-var calculateAverage = function (numbers) {
-    var sum = 0;
-    numbers.forEach(function (num) {
-        sum += num;
-    });
-    return sum / numbers.length;
-};
-console.log(calculateAverage([1, 2, 3, 4, 5]));
-;
+// const calculateAverage = (numbers: number[]):number => {
+//     let sum = 0;
+//     numbers.forEach((num) => {
+//         sum += num;   
+//     });
+//     return sum/numbers.length;
+// }
+// console.log(calculateAverage([1,2,3,4,5]));
 //? 2: Write a function called findMaxValue that takes an array of numbers as a parameter and returns
 //? the maximum value in the array
+var findMaxValue = function (numbers) {
+    var max = numbers[0];
+    numbers.forEach(function (num) {
+        if (num > max) {
+            max = num;
+        }
+    });
+    return max;
+};
+console.log(findMaxValue([1, 2, 3, 4, 5]));

@@ -53,23 +53,35 @@
 //? 1: Create a function called calculateAverage that takes an array of numbers as a parameter and
 //? returns the average of those numbers
 
-const calculateAverage = (numbers: number[]):number => {
-    let sum = 0;
+// const calculateAverage = (numbers: number[]):number => {
+//     let sum = 0;
 
-    numbers.forEach((num) => {
-        sum += num;   
-    });
+//     numbers.forEach((num) => {
+//         sum += num;   
+//     });
 
-    return sum/numbers.length;
-}
+//     return sum/numbers.length;
+// }
 
+// console.log(calculateAverage([1,2,3,4,5]));
 
-console.log(calculateAverage([1,2,3,4,5]));
-;
 
 
 //? 2: Write a function called findMaxValue that takes an array of numbers as a parameter and returns
 //? the maximum value in the array
 
+const findMaxValue = (numbers:number[]):number => {
+    let max:number = numbers[0];
+
+    numbers.forEach((num:number) => {
+        if(num > max) {
+            max = num;
+        }
+    });
+    return max;
+
+}
+
+console.log(findMaxValue([1,2,3,4,5]));
 
 
