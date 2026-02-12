@@ -7,3 +7,13 @@
 // * To execute a function, you simply invoke it by using its name followed by parentheses.
 // * You can provide arguments (actual values) for the parameters defined in the function declaration.
 
+// Greeting function define
+function greet(name:string, id:number) {
+    console.log(`Welcome, ${name} and your id is ${id}`);
+    
+}
+
+
+
+// function call 
+greet("muktinath", 1);
