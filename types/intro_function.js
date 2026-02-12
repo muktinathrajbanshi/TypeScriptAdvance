@@ -20,8 +20,16 @@
 //! Function return: How do you specify the return type of a function in TypeScript?
 // * To specify the return type of a function, you can use the colon (:) followed by the desired type
 // * after the function's parameter list.
-// Greeting function define
-var greet = function (name, id) { return "Welcome, ".concat(name, " and your id is ").concat(id); };
-// function call 
-var myGreet = greet("muktinath", 1);
-console.log(myGreet);
+// // Greeting function define
+// const greet = (name:string, id:number):string => `Welcome, ${name} and your id is ${id}`
+// // function call 
+// const myGreet = greet("muktinath",1);
+// console.log(myGreet);
+//TODO Practice Time
+//? Write a function called isPalindrome that takes a string as a parameter and returns true if the 
+//? string is a palindrome (reads the same forwards and backwards), and false otherwise.
+var isPalindrome = function (palin) {
+    var myPalin = palin.split("").reverse().join("");
+    return myPalin === palin;
+};
+console.log(isPalindrome("12321"));

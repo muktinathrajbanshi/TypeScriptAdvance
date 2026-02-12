@@ -29,9 +29,24 @@
 // * To specify the return type of a function, you can use the colon (:) followed by the desired type
 // * after the function's parameter list.
 
-// Greeting function define
-const greet = (name:string, id:number):string => `Welcome, ${name} and your id is ${id}`
-// function call 
-const myGreet = greet("muktinath",1);
-console.log(myGreet);
+// // Greeting function define
+// const greet = (name:string, id:number):string => `Welcome, ${name} and your id is ${id}`
+
+// // function call 
+// const myGreet = greet("muktinath",1);
+// console.log(myGreet);
+
+//TODO Practice Time
+//? Write a function called isPalindrome that takes a string as a parameter and returns true if the 
+//? string is a palindrome (reads the same forwards and backwards), and false otherwise.
+
+const isPalindrome = (palin:string):boolean => {
+    let myPalin = palin.split("").reverse().join("");
+    return myPalin === palin;
+}
+console.log(
+isPalindrome("12321"));
+
+
+
 
