@@ -21,9 +21,7 @@
 // * To specify the return type of a function, you can use the colon (:) followed by the desired type
 // * after the function's parameter list.
 // Greeting function define
-var greet = function (name, id) {
-    return "Welcome, ".concat(name, " and your id is ").concat(id);
-};
+var greet = function (name, id) { return "Welcome, ".concat(name, " and your id is ").concat(id); };
 // function call 
 var myGreet = greet("muktinath", 1);
 console.log(myGreet);

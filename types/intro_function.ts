@@ -30,10 +30,7 @@
 // * after the function's parameter list.
 
 // Greeting function define
-const greet = (name:string, id:number):string => {
-   return `Welcome, ${name} and your id is ${id}`
-    
-}
+const greet = (name:string, id:number):string => `Welcome, ${name} and your id is ${id}`
 // function call 
 const myGreet = greet("muktinath",1);
 console.log(myGreet);
