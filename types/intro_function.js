@@ -28,8 +28,23 @@
 //TODO Practice Time
 //? Write a function called isPalindrome that takes a string as a parameter and returns true if the 
 //? string is a palindrome (reads the same forwards and backwards), and false otherwise.
-var isPalindrome = function (palin) {
-    var myPalin = palin.split("").reverse().join("");
-    return myPalin === palin;
+// const isPalindrome = (palin:string):boolean => {
+//     let myPalin = palin.split("").reverse().join("");
+//     return myPalin === palin;
+// }
+// console.log(
+// isPalindrome("12321"));
+//! Homework 🕵️‍♂️
+//? 1: Create a function called calculateAverage that takes an array of numbers as a parameter and
+//? returns the average of those numbers
+var calculateAverage = function (numbers) {
+    var sum = 0;
+    numbers.forEach(function (num) {
+        sum += num;
+    });
+    return sum / numbers.length;
 };
-console.log(isPalindrome("12321"));
+console.log(calculateAverage([1, 2, 3, 4, 5]));
+;
+//? 2: Write a function called findMaxValue that takes an array of numbers as a parameter and returns
+//? the maximum value in the array
