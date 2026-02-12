@@ -15,6 +15,14 @@
     // "types": ["node"],
     // and npm install -D @types/node
 
+    // Language and Environment
+    "target": "es2022",
+
+    // Set the JavaScript language version for emitted JavaScript and include compatible library
+    // declarations.
+
+    "lib": ["es2022", "DOM"],
+
     // Other Outputs
     "sourceMap": true,
     "declaration": true,

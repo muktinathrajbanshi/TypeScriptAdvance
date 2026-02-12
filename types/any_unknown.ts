@@ -18,3 +18,11 @@
 // * using the any type can be a convenient way to quickly annotate variables and functions without
 // * immediately specifying their precise type.
 
+// * -------------------------------------------------------
+// * Unknown Type
+// * -------------------------------------------------------
+
+//? The unknown type is a safer alternative to any because it still enforces type checking and 
+//? type safety.
+//? Variables of type unknown can hold values of any type, but you must perform type checks or
+//? type assertions before using them in specific ways.
