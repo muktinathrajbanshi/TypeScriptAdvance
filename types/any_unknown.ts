@@ -34,14 +34,28 @@
 
 // })
 
-let num2:unknown;
-num2 = 35;
-num2 = "mukti";
-num2 = true
+// let num2:unknown;
+// num2 = 35;
+// num2 = "mukti";
+// num2 = true
 
-if(typeof num2 === "number") {
-    console.log(num2 + 5);
-} else if(typeof num2 === "boolean") {
-    console.log(num2);
-    
+// if(typeof num2 === "number") {
+//     console.log(num2 + 5);
+// } else if(typeof num2 === "boolean") {
+//     console.log(num2);
+// }
+
+async function fetchData(): Promise<unknown> {
+    const response = await fetch("https://raw.githubusercontent.com/muktinathrajbanshi/quotes-api/refs/heads/main/index.json");
+    const data = await response.json();
+    return data;
+}
+
+async function processData() {
+    const response = await fetchData();
+
+    if (typeof response === "object") {
+        // perform operation on the response object
+        
+    }
 }
