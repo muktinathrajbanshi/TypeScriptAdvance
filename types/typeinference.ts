@@ -2,13 +2,13 @@
 // * determine and assign types to variables, expressions, and function return values based on their
 // * usage and context in the code.
 
-let myName = "muktinath";
-let myFavNum = 5;
+// let myName = "muktinath";
+// let myFavNum = 5;
 // myFavNum = true
 
-let firstName = "muktinath"; // The compiler infers the type string for the variable name.
+// let firstName = "muktinath"; // The compiler infers the type string for the variable name.
 
-let age = 25; // The compiler infers the type number for the variable age.
+// let age = 25; // The compiler infers the type number for the variable age.
 
 let isValid = true; // The compiler infers the type boolean for the variable isValid
 
@@ -22,8 +22,19 @@ let isValid = true; // The compiler infers the type boolean for the variable isV
 // * 1: Declare a variable message and initialize it with the value "Hello, TypeScript!". Infer the type
 // * of message using type inference.
 
+let message = "Hello, TypeScript!";
 
-
+// let message: string
 
 // * 2: Write a function calculateArea that takes the length and width parameters of type number and 
 // * returns their product. Infer the return type of the function using type inference.
+
+
+const calculateArea = (length:number, width:number) => {
+    return length * width;
+} 
+
+
+console.log(calculateArea(12, 4));
+
+//number no need to write :number
