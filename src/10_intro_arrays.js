@@ -1,36 +1,24 @@
 //! Array in TS
-
 //? In TypeScript, you can create and initialize arrays using various approaches
-
 // a) Using square brackets:
-
 // const numbers:number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 // b) Using the Array constructor:
-
 // const numbers1:number[] = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
-
 // c) Using the Array.of method:
-
-// const names:string[] = Array.of("muktinath", "milan", "mukti");
-
+var names = Array.of("muktinath", "milan", "mukti");
 // Operation: Accessing elements using index:
 //? You can access individual elements of an array using square brackets notation with the index of
 //? the element. Remember that array indices start from 0.
-
-// console.log(names[2]);
-// console.log(names.length);
-
-
-
+console.log(names[2]);
+console.log(names.length);
 //TODO HomeWork Time
-const value1 = [1, 2, 3, 4, 5];
-// Is value1 an array? Yes or No?
-const value2 = "Hello, world!";
-// Is value2 an array? Yes or No?
-const value3 = { name: "John", age: 30 };
-// Is value3 an array? Yes or No?
-const value4 = [true, false, true];
-// Is value4 an array? Yes or No?
-const value5 = 42;
-// Is value5 an array? Yes or No?
+// const value1 = [1, 2, 3, 4, 5];
+// // Is value1 an array? Yes or No?
+// const value2 = "Hello, world!";
+// // Is value2 an array? Yes or No?
+// const value3 = { name: "John", age: 30 };
+// // Is value3 an array? Yes or No?
+// const value4 = [true, false, true];
+// // Is value4 an array? Yes or No?
+// const value5 = 42;
+// // Is value5 an array? Yes or No?
