@@ -3,8 +3,16 @@
 //? In TypeScript, you can create and initialize arrays using various approaches
 
 // a) Using square brackets:
+
+const numbers:number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 // b) Using the Array constructor:
+
+const numbers1:number[] = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
 // c) Using the Array.of method:
+
+const names = Array.of("muktinath", "milan", "mukti");
 
 //Operation: Accessing elements using index:
 
