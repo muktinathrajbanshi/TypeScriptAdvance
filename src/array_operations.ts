@@ -30,8 +30,10 @@ const lastData = fruits.pop();
 
 // Using for...of loop
  
-for (const fruit of fruits) {
-    console.log(fruit);
-}
+// for (const fruit of fruits) {
+//     console.log(fruit);
+// }
 
 // Using forEach Method
+
+fruits.forEach((curVal:string) => console.log(curVal));

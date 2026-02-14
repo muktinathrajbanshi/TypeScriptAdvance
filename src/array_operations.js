@@ -16,8 +16,8 @@ var lastData = fruits.pop();
 //     console.log(fruits[i]);
 // }
 // Using for...of loop
-for (var _i = 0, fruits_1 = fruits; _i < fruits_1.length; _i++) {
-    var fruit = fruits_1[_i];
-    console.log(fruit);
-}
+// for (const fruit of fruits) {
+//     console.log(fruit);
+// }
 // Using forEach Method
+fruits.forEach(function (curVal) { return console.log(curVal); });
