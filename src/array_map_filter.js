@@ -7,11 +7,15 @@ var numbers = [1, 2, 3, 4, 5];
 // const doubleData:number[] = numbers.map((curVal:number) => curVal * 2 );
 // console.log(doubleData);
 //? 2: Converting numbers to strings
-var numberToString = numbers.map(function (curVal) { return curVal.toString(); });
-console.log(numberToString);
+// const numberToString:string[] = numbers.map((curVal:number) => curVal.toString() );
+// console.log(numberToString);
 //! Filter Method
 //? 1: Filtering even numbers
+// const evenNumbers:number[] = numbers.filter((curElem:number) => curElem%2 === 0 );
+// console.log(evenNumbers);
 //? 2: Filtering numbers greater than 3
+var numGreaterThanThree = numbers.filter(function (curElem) { return curElem > 3; });
+console.log(numGreaterThanThree);
 //todo Homework Time
 // * Practice questions for map:
 //? 1: Given an array of strings representing names, create a new array that contains the uppercase

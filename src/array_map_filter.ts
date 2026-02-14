@@ -13,15 +13,26 @@ const numbers: number[] = [1, 2, 3, 4, 5];
 
 //? 2: Converting numbers to strings
 
-const numberToString:string[] = numbers.map((curVal:number) => curVal.toString() );
+// const numberToString:string[] = numbers.map((curVal:number) => curVal.toString() );
 
-console.log(numberToString);
+// console.log(numberToString);
 
 
 
 //! Filter Method
 //? 1: Filtering even numbers
+
+// const evenNumbers:number[] = numbers.filter((curElem:number) => curElem%2 === 0 );
+
+// console.log(evenNumbers);
+
+
 //? 2: Filtering numbers greater than 3
+
+const numGreaterThanThree:number[] = numbers.filter((curElem:number) => curElem > 3);
+
+console.log(numGreaterThanThree);
+
 
 //todo Homework Time
 // * Practice questions for map:
@@ -35,4 +46,4 @@ console.log(numberToString);
 //? greater than 15.
 
 // * const names: string[] = ["Hari", "Ram", "Mukti", "Shyam", "Krishna"];
-//? 2: Given an array of strings, filter out the names
+//? 2: Given an array of strings, filter out the names that start with letter "A".
