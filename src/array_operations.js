@@ -12,8 +12,12 @@ var lastData = fruits.pop();
 //? You can iterate over the elements of an array using various looping constructs such as for
 //? for...of, or array methods like forEach.
 // Using for loop
-for (var i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
-}
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i]);
+// }
 // Using for...of loop
+for (var _i = 0, fruits_1 = fruits; _i < fruits_1.length; _i++) {
+    var fruit = fruits_1[_i];
+    console.log(fruit);
+}
 // Using forEach Method
