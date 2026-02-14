@@ -24,11 +24,17 @@
 // const newArray:string[] = names.map((curElem:string) => curElem.toUpperCase());
 // console.log(newArray);
 //? 2: Given an array of numbers, create a new array that contains the square of each number
-var numbers = [1, 2, 3, 4, 5];
-var squareOfEachNum = numbers.map(function (curNum) { return curNum * curNum; });
-console.log(squareOfEachNum);
+// const numbers: number[] = [1, 2, 3, 4, 5];
+// const squareOfEachNum:number[] = numbers.map((curNum:number) => curNum * curNum);
+// console.log(squareOfEachNum);
 // * Practice questions for filter:
 //? 1: Given an array of strings, create a new array that contains only the strings with a length
 //? greater than 4.
+// const names: string[] = ["Hari", "Ram", "Mukti", "Shyam", "Krishna"];
+// const newArray:string[] = names.filter((curElem:string) => curElem.length > 4);
+// console.log(newArray);
 // * const names: string[] = ["Hari", "Ram", "Mukti", "Shyam", "Krishna"];
-//? 2: Given an array of strings, filter out the names that start with letter "A".
+//? 2: Given an array of strings, filter out the names that start with letter "M".
+var names = ["Muktinath", "Ram", "Milan", "Shyam", "Mukti"];
+var startNameWithLetterM = names.filter(function (curVal) { return curVal.startsWith("M"); });
+console.log(startNameWithLetterM);
