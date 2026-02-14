@@ -6,9 +6,14 @@ var newUpdatedFruits = fruits.push("kiwi");
 // console.log(fruits);
 // b) Removing elements from an array using pop:
 var lastData = fruits.pop();
-console.log(lastData);
-console.log(fruits);
+// console.log(lastData);
+// console.log(fruits);
 //! Iterating over elements:
 //? You can iterate over the elements of an array using various looping constructs such as for
-//? for...of loop
-//? Using forEach method
+//? for...of, or array methods like forEach.
+// Using for loop
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+// Using for...of loop
+// Using forEach Method
