@@ -7,35 +7,35 @@
 // * definition:
 
 
-type Person = {
-    name : string;
-    age : number;
-    isStudent : boolean;
-    address : { city : string; country : string }
-}
+// type Person = {
+//     name : string;
+//     age : number;
+//     isStudent : boolean;
+//     address : { city : string; country : string }
+// }
 
-const person : Person = {
-    name : "Muktinath Rajbanshi",
-    age : 23,
-    isStudent : true,
-    address : {
-        city : "Kathmandu",
-        country : "Nepal"
-    }
-}
+// const person : Person = {
+//     name : "Muktinath Rajbanshi",
+//     age : 23,
+//     isStudent : true,
+//     address : {
+//         city : "Kathmandu",
+//         country : "Nepal"
+//     }
+// }
 
-const person1 : Person = {
-    name : "Milan Rajbanshi",
-    age : 24,
-    isStudent : true,
-    address : {
-        city : "Birtamode",
-        country : "Nepal"
-    }
-}
+// const person1 : Person = {
+//     name : "Milan Rajbanshi",
+//     age : 24,
+//     isStudent : true,
+//     address : {
+//         city : "Birtamode",
+//         country : "Nepal"
+//     }
+// }
 
-console.log(person);
-console.log(person1);
+// console.log(person);
+// console.log(person1);
 
 
 // Todo Create a Product Object:
@@ -46,16 +46,19 @@ console.log(person1);
 // price : "1000"
 // Quantity : 5
 
-
-const product : {
-    name : string;
-    price : number;
-    quantity : number
-} = {
-    name : "Laptop",
-    price : 1000,
-    quantity : 5
+type Product = {
+    Name : string;
+    Price : number;
+    Quantity : number;
 }
+
+const product : Product = {
+    Name : "Laptop",
+    Price : 1000,
+    Quantity : 5
+}
+
+// console.log(product.Name);
 
 
 
@@ -63,5 +66,10 @@ const product : {
 
 //? Calculate Total Price:
 //? Given the product object from the previous question, write a function called calculateTotalPrice 
-//? that calculates and returns the total price (price, quantity) of the product.
+//? that calculates and returns the total price (price * quantity) of the product.
 
+const calculateTotalPrice = (product:Product) => {
+    return `${product.Name} total cost ${product.Price} `;
+}
+
+console.log(calculateTotalPrice(product));

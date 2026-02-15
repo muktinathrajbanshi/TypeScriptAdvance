@@ -21,6 +21,7 @@
 // }
 
 
+
 // // Todo Accessing the object data
 // console.log(person.address.country);
 
@@ -38,18 +39,16 @@
 // Price : 1000
 // Quantity : 5
 
-const product : {
+type Product = {
     Name : string;
     Price : number;
-    Quantity : number
-} = {
+    Quantity : number;
+}
+
+const product : Product = {
     Name : "Ramesh",
     Price : 1000,
     Quantity : 5
 }
-
-product.Quantity = 5000;
-console.log(product.Quantity);
-
 
 console.log(product.Name);
