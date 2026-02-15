@@ -5,22 +5,28 @@
 //? objects
 //? 🙅‍♂️ -> name, age, isStudent, address{ city, country }
 
-const person = {
-    name : "Muktinath",
-    age : 23,
-    isStudent : true,
-    address : {
-        city : "Kathmandu",
-        country : "Nepal"
-    }
-}
+// const person:{
+//     name : string;
+//     age : number;
+//     isStudent : boolean;
+//     address : { city : string; country : string}
+// } = {
+//     name : "Muktinath",
+//     age : 23,
+//     isStudent : true,
+//     address : {
+//         city : "Kathmandu",
+//         country : "Nepal"
+//     }
+// }
 
-// Todo Accessing the object data
-console.log(person.address.country);
 
-// Todo Updating object properties
-person.address.country = "India";
-console.log(person.address.country);
+// // Todo Accessing the object data
+// console.log(person.address.country);
+
+// // Todo Updating object properties
+// person.address.country = "India";
+// console.log(person.address.country);
 
 
 //! Homework
@@ -31,3 +37,19 @@ console.log(person.address.country);
 // Name : "Laptop"
 // Price : 1000
 // Quantity : 5
+
+const Product : {
+    Name : string;
+    Price : number;
+    Quantity : number
+} = {
+    Name : "Ramesh",
+    Price : 1000,
+    Quantity : 5
+}
+
+Product.Quantity = 5000;
+console.log(Product.Quantity);
+
+
+console.log(Product.Name);

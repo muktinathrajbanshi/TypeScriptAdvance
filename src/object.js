@@ -3,20 +3,25 @@
 //? let's consider a real-life example of representing a person's information using TypeScript 
 //? objects
 //? 🙅‍♂️ -> name, age, isStudent, address{ city, country }
-var person = {
-    name: "Muktinath",
-    age: 23,
-    isStudent: true,
-    address: {
-        city: "Kathmandu",
-        country: "Nepal"
-    }
-};
-// Todo Accessing the object data
-console.log(person.address.country);
-// Todo Updating object properties
-person.address.country = 123;
-console.log(person.address.country);
+// const person:{
+//     name : string;
+//     age : number;
+//     isStudent : boolean;
+//     address : { city : string; country : string}
+// } = {
+//     name : "Muktinath",
+//     age : 23,
+//     isStudent : true,
+//     address : {
+//         city : "Kathmandu",
+//         country : "Nepal"
+//     }
+// }
+// // Todo Accessing the object data
+// console.log(person.address.country);
+// // Todo Updating object properties
+// person.address.country = "India";
+// console.log(person.address.country);
 //! Homework
 //? Create a Product Object:
 //? Define a product with properties for name, price, and quantity. Create a product object with 
@@ -24,3 +29,11 @@ console.log(person.address.country);
 // Name : "Laptop"
 // Price : 1000
 // Quantity : 5
+var Product = {
+    Name: "Ramesh",
+    Price: 1000,
+    Quantity: 5
+};
+Product.Quantity = 5000;
+console.log(Product.Quantity);
+console.log(Product.Name);
