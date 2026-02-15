@@ -13,3 +13,27 @@ type Person = {
     isStudent : boolean;
     address : { city : string; country : string }
 }
+
+const person : Person = {
+    name : "Muktinath Rajbanshi",
+    age : 23,
+    isStudent : true,
+    address : {
+        city : "Kathmandu",
+        country : "Nepal"
+    }
+}
+
+const person1 : Person = {
+    name : "Milan Rajbanshi",
+    age : 24,
+    isStudent : true,
+    address : {
+        city : "Birtamode",
+        country : "Nepal"
+    }
+}
+
+console.log(person);
+console.log(person1);
+
