@@ -38,7 +38,7 @@
 // Price : 1000
 // Quantity : 5
 
-const Product : {
+const product : {
     Name : string;
     Price : number;
     Quantity : number
@@ -48,8 +48,8 @@ const Product : {
     Quantity : 5
 }
 
-Product.Quantity = 5000;
-console.log(Product.Quantity);
+product.Quantity = 5000;
+console.log(product.Quantity);
 
 
-console.log(Product.Name);
+console.log(product.Name);

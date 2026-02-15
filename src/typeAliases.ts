@@ -37,3 +37,31 @@ const person1 : Person = {
 console.log(person);
 console.log(person1);
 
+
+// Todo Create a Product Object:
+//? Define an interface or type representing a product with properties for name, price, and quantity.
+//? Create a product object with the following data:
+
+// name : "laptop"
+// price : "1000"
+// Quantity : 5
+
+
+const product : {
+    name : string;
+    price : number;
+    quantity : number
+} = {
+    name : "Laptop",
+    price : 1000,
+    quantity : 5
+}
+
+
+
+
+
+//? Calculate Total Price:
+//? Given the product object from the previous question, write a function called calculateTotalPrice 
+//? that calculates and returns the total price (price, quantity) of the product.
+
