@@ -7,4 +7,24 @@
 //? Very Important => call signatures are typically used inside object type notations to describe the
 //? shape of functions within object types.
 
+type Student = {
+    name : string;
+    age : number;
+    gender? : string;
+}
+
+const student1 : Student = {
+    name : "Muktinath Rajbanshi",
+    age : 23,
+}
+
+
+const introduction : (student1 : Student) => string = (student1 : Student) : string => {
+    const { name, age } = student1;
+    return `Welcome My name is ${name}, I am ${age} years old`
+}
+
+console.log(introduction(student1));
+
+
 //! Homework
