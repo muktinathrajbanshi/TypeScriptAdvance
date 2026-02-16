@@ -74,29 +74,41 @@
 // * Create an array of SubjectGrade tuples to store the grades for a student in three different
 // * subjects: Math, English, and Science. Calculate and display the average grade for the student.
 
-type SubjectGrade = [ string, number ];
+// type SubjectGrade = [ string, number ];
 
 
-const studentGrades : SubjectGrade[] = [ 
-    [ "Math", 80 ], 
-    [ "English", 90 ], 
-    [ "Science", 100 ] 
-];
+// const studentGrades : SubjectGrade[] = [ 
+//     [ "Math", 80 ], 
+//     [ "English", 90 ], 
+//     [ "Science", 100 ] 
+// ];
 
-const displayAverageGrade = (student : SubjectGrade[]) : number => {
-    let total = 0;
+// const displayAverageGrade = (student : SubjectGrade[]) : number => {
+//     let total = 0;
 
-    student.forEach((curVal) => {
-        const [ subject, grade ] = curVal;
-        console.log(`${subject} : ${grade}`);
-        total = total + grade;  
-    });
-    console.log(student.length);
+//     student.forEach((curVal) => {
+//         const [ subject, grade ] = curVal;
+//         console.log(`${subject} : ${grade}`);
+//         total = total + grade;  
+//     });
+//     console.log(student.length);
     
 
-    const average = total / student.length;
-    return average;
-};
+//     const average = total / student.length;
+//     return average;
+// };
 
-const avg = displayAverageGrade(studentGrades);
-console.log(`average grades ${avg}`);
+// const avg = displayAverageGrade(studentGrades);
+// console.log(`average grades ${avg}`);
+
+
+//! Question 3 :
+//? You are working on a weather application, and you need to store weather data for different cities.
+//? Define a tuple type called WeatherData to represent the weather information, containing the 
+//? following elements:
+
+// * city name (sting)
+// * Temperature in Celsius (number)
+// * Weather condition (string)
+// * Create a function called displayWeather that takes an array of WeatherData and displays the weather
+// * information for each city in a user-friendly format.
