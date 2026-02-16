@@ -47,19 +47,30 @@
 // * Create two product instances using this tuple type and display their information.
 
 
-type ProductInfo = [string, number, number];
+// type ProductInfo = [string, number, number];
 
-const displayProductInfo = (product : ProductInfo) => {
+// const displayProductInfo = (product : ProductInfo) => {
 
-    const [name, price, quantity] = product;
-    console.log(`Product ${name} and Price is ${price} and Quantity is ${quantity}`);
+//     const [name, price, quantity] = product;
+//     console.log(`Product ${name} and Price is ${price} and Quantity is ${quantity}`);
     
-}
+// }
 
 
-const product1 : ProductInfo = [ "Laptop", 100000, 100 ];
-const product2 : ProductInfo = [ "Mobile", 200000, 150 ];
+// const product1 : ProductInfo = [ "Laptop", 100000, 100 ];
+// const product2 : ProductInfo = [ "Mobile", 200000, 150 ];
 
-displayProductInfo(product1);
-displayProductInfo(product2);
+// displayProductInfo(product1);
+// displayProductInfo(product2);
+
+
+//! Question 2:
+//? You are creating a student management system and want to keep track of student grades for different
+//? subjects. Define a tuple type called SubjectGrade to represent a subject and its corresponding
+//? grade, containing the following elements :
+
+// * Subject name (string)
+// * Grade (number)
+// * Create an array of SubjectGrade tuples to store the grades for a student in three different
+// * subjects: Math, English, and Science. Calculate and display the average grade for the student.
 
