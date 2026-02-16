@@ -74,3 +74,29 @@
 // * Create an array of SubjectGrade tuples to store the grades for a student in three different
 // * subjects: Math, English, and Science. Calculate and display the average grade for the student.
 
+type SubjectGrade = [ string, number ];
+
+
+const studentGrades : SubjectGrade[] = [ 
+    [ "Math", 80 ], 
+    [ "English", 90 ], 
+    [ "Science", 100 ] 
+];
+
+const displayAverageGrade = (student : SubjectGrade[]) : number => {
+    let total = 0;
+
+    student.forEach((curVal) => {
+        const [ subject, grade ] = curVal;
+        console.log(`${subject} : ${grade}`);
+        total = total + grade;  
+    });
+    console.log(student.length);
+    
+
+    const average = total / student.length;
+    return average;
+};
+
+const avg = displayAverageGrade(studentGrades);
+console.log(`average grades ${avg}`);
