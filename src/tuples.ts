@@ -12,26 +12,54 @@
 
 //! Defining a tuple type for person information
 
- type PersonInfo = [string, number, boolean]
+//  type PersonInfo = readonly [string, number, boolean]
 
 //! Function to display person information
 
-const displayPersonInfo = (person : PersonInfo) => {
-    const [ name, age, hasDriverLicense ] = person;
-    console.log(`Name : ${name}, Age : ${age}, Driver's License: ${hasDriverLicense ? "Yes" : "No"}`);
-}
+// const displayPersonInfo = (person : PersonInfo) => {
+//     const [ name, age, hasDriverLicense ] = person;
+//     console.log(`Name : ${name}, Age : ${age}, Driver's License: ${hasDriverLicense ? "Yes" : "No"}`);
+// }
 
 //! Example usage
-const person1 : PersonInfo = ["Muktinath Rajbanshi", 23, true];
-const person2 : PersonInfo = ["Milan Rajbanshi", 24, false];
+// const person1 : PersonInfo = ["Muktinath Rajbanshi", 23, true];
+// const person2 : PersonInfo = ["Milan Rajbanshi", 24, false];
 
-displayPersonInfo(person1);
-displayPersonInfo(person2);
+// person1.push("coding");
+// console.log(person1);
+
+
+// displayPersonInfo(person1);
+// displayPersonInfo(person2);
 
 // console.log(displayPersonInfo(PersonInfo));
 
 
 
+//! Question 1:
+//? You are building a simple e-commerce application and need to store product information.
+//? Define a tuple type called ProductInfo to represent each product, containing the following 
+//? elements:
+
+// * Product name (string)
+// * Price (number)
+// * Quantity in stock (number)
+// * Create two product instances using this tuple type and display their information.
 
 
+type ProductInfo = [string, number, number];
+
+const displayProductInfo = (product : ProductInfo) => {
+
+    const [name, price, quantity] = product;
+    console.log(`Product ${name} and Price is ${price} and Quantity is ${quantity}`);
+    
+}
+
+
+const product1 : ProductInfo = [ "Laptop", 100000, 100 ];
+const product2 : ProductInfo = [ "Mobile", 200000, 150 ];
+
+displayProductInfo(product1);
+displayProductInfo(product2);
 

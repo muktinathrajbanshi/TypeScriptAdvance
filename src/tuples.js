@@ -2,14 +2,11 @@
 // * elements of different types. They are similar to arrays, but with a key difference: the types of
 // * elements in a tuple are fixed and declared at the time of creation, whereas arrays can hold elements
 // * of the same type, and their size can vary.
-//! Function to display person information
-var displayPersonInfo = function (person) {
-    var name = person[0], age = person[1], hasDriverLicense = person[2];
-    console.log("Name : ".concat(name, ", Age : ").concat(age, ", Driver's License: ").concat(hasDriverLicense ? "Yes" : "No"));
+var displayProductInfo = function (product) {
+    var name = product[0], price = product[1], quantity = product[2];
+    console.log("Product ".concat(name, " and Price is ").concat(price, " and Quantity is ").concat(quantity));
 };
-//! Example usage
-var person1 = ["Muktinath Rajbanshi", 23, true];
-var person2 = ["Milan Rajbanshi", 24, false];
-displayPersonInfo(person1);
-displayPersonInfo(person2);
-// console.log(displayPersonInfo(PersonInfo));
+var product1 = ["Laptop", 100000, 100];
+var product2 = ["Mobile", 200000, 150];
+displayProductInfo(product1);
+displayProductInfo(product2);
