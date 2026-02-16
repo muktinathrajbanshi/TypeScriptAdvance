@@ -112,3 +112,23 @@
 // * Weather condition (string)
 // * Create a function called displayWeather that takes an array of WeatherData and displays the weather
 // * information for each city in a user-friendly format.
+
+type WeatherData  = [ string, number, string ];
+
+const infoWeatherData : WeatherData[] = [
+    ["Kathmandu", 19, "Cloudy"],
+    ["Pokhara", 12, "Rainy"],
+    ["Biratnagar", 27, "Sunny"]
+]; 
+
+const displayWeatherInfo  = (data : WeatherData[]) : void  => {
+    
+    data.forEach((curData) => {
+        const [ city, temp, condition ] = curData;
+        console.log(`🌍 City: ${city} 🌡️ Temperature: ${temp}°C ⛅ Condition: ${condition}`);
+        
+    });
+    
+};
+
+displayWeatherInfo(infoWeatherData);
