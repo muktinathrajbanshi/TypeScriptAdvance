@@ -5,6 +5,13 @@
 // * the union includes all the required properties. Failure to do so will result in a type error during
 // * compilation.
 
+const inputValue = (value : string | number | boolean) : void => {
+
+}
+
+inputValue(55);
+inputValue("hello world");
+inputValue(true);
 
 
 
@@ -12,4 +19,5 @@
 // * actions based on the type of the input. Suppose we want to create a function that doubles the value
 // * if the input is a number, or converts the input to uppercase if it's a string. To achieve this, we
 // * can use a union type to allow the function to accept both numbers and strings.
+
 
