@@ -116,7 +116,6 @@
 // console.log(myCompleteInfo);
 
 // todo Homework Question: Combine User and Account Data
-
 // todo You are building a user management system, and you have two TypeScript types:
 
 //? User: Represents basic user information, with the following properties:
@@ -129,4 +128,14 @@
 //* accountId (number): The account's unique identifier.
 //* accountType (string): The type of the account (e.g., "Savings", "Checking", etc.)
 //* balance (number): The account balance.
+
+
+//? Your task is to create a function called combineUserAndAccount that takes a User object and an
+//? Account object as arguments and returns a new object representing the combined information of the
+//? user and their account.
+
+//* Ensure that the resulting object contains all the properties from both User and Account types.
+
+
+
 
