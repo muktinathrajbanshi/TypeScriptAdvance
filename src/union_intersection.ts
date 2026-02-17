@@ -59,30 +59,30 @@
 //! Intersection types allow you to combine multiple types into a single type. You use the & (ampersand)
 //! symbol to define an intersection type.
 
-type Person = {
-    name : string;
-    age : number
-}
+// type Person = {
+//     name : string;
+//     age : number
+// }
 
-type Employee = {
-    emp_id : number;
-    department : string
-}
+// type Employee = {
+//     emp_id : number;
+//     department : string
+// }
 
-type EmployeeDetails = Person & Employee
+// type EmployeeDetails = Person & Employee
 
-const employee : EmployeeDetails = {
-    name : "Muktinath",
-    age : 23,
-    emp_id : 11,
-    department : "IT"
+// const employee : EmployeeDetails = {
+//     name : "Muktinath",
+//     age : 23,
+//     emp_id : 11,
+//     department : "IT"
 
-}
+// }
 
-const myPersonalInfo : Person  = {
-    name : "Muktinath",
-    age : 23
-}
+// const myPersonalInfo : Person  = {
+//     name : "Muktinath",
+//     age : 23
+// }
 
 // * Practice: Create User Profile
 // * You are given two TypeScript types: User and MyLocation. The User type represents basic user 
@@ -90,28 +90,43 @@ const myPersonalInfo : Person  = {
 // * called createUserProfile that takes a User object and a MyLocation object as arguments and prints
 // * the user's name and the city they are from.
 
-type User = {
-    name : string;
-    age : number
-}
+// type User = {
+//     name : string;
+//     age : number
+// }
 
-type MyLocation = {
-    city : string;
-    country : string
-}
+// type MyLocation = {
+//     city : string;
+//     country : string
+// }
 
-const user : User = { name : "Muktinath", age : 23 }
-const myLocation : MyLocation = { city : "Kathmandu", country : "Nepal" }
+// const user : User = { name : "Muktinath", age : 23 }
+// const myLocation : MyLocation = { city : "Kathmandu", country : "Nepal" }
 
-// define 
-const createUserProfile = (user : User, location : MyLocation) => {
+// // define 
+// const createUserProfile = (user : User, location : MyLocation) => {
 
-    // return `My name is ${user.name} and I am living in city: ${location.city}`
-    return {...user, ...location}
+//     // return `My name is ${user.name} and I am living in city: ${location.city}`
+//     return {...user, ...location}
 
-}
+// }
 
 // call 
-const myCompleteInfo : User & MyLocation = createUserProfile(user, myLocation);
-console.log(myCompleteInfo);
+// const myCompleteInfo : User & MyLocation = createUserProfile(user, myLocation);
+// console.log(myCompleteInfo);
+
+// todo Homework Question: Combine User and Account Data
+
+// todo You are building a user management system, and you have two TypeScript types:
+
+//? User: Represents basic user information, with the following properties:
+
+//? id (number): The user's unique identifier.
+//* name (string): The user's name.
+//* email (string): The user's email address
+
+//? Account: Contains details about the user's account, with the following properties:
+//* accountId (number): The account's unique identifier.
+//* accountType (string): The type of the account (e.g., "Savings", "Checking", etc.)
+//* balance (number): The account balance.
 
