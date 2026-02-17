@@ -89,3 +89,15 @@ const myPersonalInfo : Person  = {
 // * information, while the MyLocation type contains details about the user's location. Create a function
 // * called createUserProfile that takes a User object and a MyLocation object as arguments and prints
 // * the user's name and the city they are from.
+
+type User = {
+    name : string;
+    age : number
+}
+
+type MyLocation = {
+    city : string;
+    country : string
+}
+
+const user : User = { name : "Muktinath", age : 23 }
