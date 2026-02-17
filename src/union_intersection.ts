@@ -5,13 +5,13 @@
 // * the union includes all the required properties. Failure to do so will result in a type error during
 // * compilation.
 
-const inputValue = (value : string | number | boolean) : void => {
+// const inputValue = (value : string | number | boolean) : void => {
 
-}
+// }
 
-inputValue(55);
-inputValue("hello world");
-inputValue(true);
+// inputValue(55);
+// inputValue("hello world");
+// inputValue(true);
 
 
 
@@ -21,18 +21,38 @@ inputValue(true);
 // * can use a union type to allow the function to accept both numbers and strings.
 
 // define 
-const userInput = (value : string | number): string | number => {
+// const userInput = (value : string | number): string | number => {
+//     if (typeof value === "number") {
+//         return value * 2;
+//     } else if (typeof value === "string") {
+//         return value.toUpperCase();
+//     } else {
+//         throw new Error("Invalid Input Data")
+//     }
+// }
+// // function call
+// console.log(userInput(10));
+// console.log(userInput("Muktinath Rajbanshi"));
+
+//Todo Homework Time
+//? We want to create a function that formats the value passed to it in a specific way based on its type:
+//? If the input is a number, it should add a dollar sign and format it with two decimal places.
+//? If the input is a boolean, it should return "Yes" for true and "No" for false.
+//? If the input is a string, it should capitalize the first letter.
+
+const inputUser = (value : number | boolean | string): string  => {
     if (typeof value === "number") {
-        return value * 2;
+        return `$${value.toFixed(2)}`;
+    } else if (typeof value === "boolean") {
+        return value ? "Yes" : "No";
     } else if (typeof value === "string") {
-        return value.toUpperCase();
-    } else {
-        throw new Error("Invalid Input Data")
+        return value.charAt(0).toUpperCase() + value.slice(1);
     }
-}
+    return "";
+};
 
 
-// function call
-console.log(userInput(10));
+console.log(inputUser(10));
+console.log(inputUser(false));
+console.log(inputUser("muktinath rajbanshi"));
 
-console.log(userInput("Muktinath Rajbanshi"));
