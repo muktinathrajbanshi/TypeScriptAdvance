@@ -40,19 +40,52 @@
 //? If the input is a boolean, it should return "Yes" for true and "No" for false.
 //? If the input is a string, it should capitalize the first letter.
 
-const inputUser = (value : number | boolean | string): string  => {
-    if (typeof value === "number") {
-        return `$${value.toFixed(2)}`;
-    } else if (typeof value === "boolean") {
-        return value ? "Yes" : "No";
-    } else if (typeof value === "string") {
-        return value.charAt(0).toUpperCase() + value.slice(1);
-    }
-    return "";
-};
+// const inputUser = (value : number | boolean | string): string  => {
+//     if (typeof value === "number") {
+//         return `$${value.toFixed(2)}`;
+//     } else if (typeof value === "boolean") {
+//         return value ? "Yes" : "No";
+//     } else if (typeof value === "string") {
+//         return value.charAt(0).toUpperCase() + value.slice(1);
+//     }
+//     return "";
+// };
 
 
-console.log(inputUser(10));
-console.log(inputUser(false));
-console.log(inputUser("muktinath rajbanshi"));
+// console.log(inputUser(10));
+// console.log(inputUser(false));
+// console.log(inputUser("muktinath rajbanshi"));
 
+//! Intersection types allow you to combine multiple types into a single type. You use the & (ampersand)
+//! symbol to define an intersection type.
+
+type Person = {
+    name : string;
+    age : number
+}
+
+type Employee = {
+    emp_id : number;
+    department : string
+}
+
+type EmployeeDetails = Person & Employee
+
+const employee : EmployeeDetails = {
+    name : "Muktinath",
+    age : 23,
+    emp_id : 11,
+    department : "IT"
+
+}
+
+const myPersonalInfo : Person  = {
+    name : "Muktinath",
+    age : 23
+}
+
+// * Practice: Create User Profile
+// * You are given two TypeScript types: User and MyLocation. The User type represents basic user 
+// * information, while the MyLocation type contains details about the user's location. Create a function
+// * called createUserProfile that takes a User object and a MyLocation object as arguments and prints
+// * the user's name and the city they are from.
