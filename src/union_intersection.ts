@@ -137,5 +137,37 @@
 //* Ensure that the resulting object contains all the properties from both User and Account types.
 
 
+type User = {
+    id : number;
+    name : string;
+    email : string
+}
+
+type Account = {
+    acc_id : number;
+    acc_type : string;
+    balance : number
+}
+
+const user : User = {
+    id : 143,
+    name : "Muktinath Rajbanshi",
+    email : "muktinathrajbanshi786@gmail.com"
+}
+
+const account : Account = {
+    acc_id : 120,
+    acc_type : "Saving",
+    balance : 2000000
+}
+
+// define 
+
+const combineUserAndAccount = (userDetails : User, accountDetails : Account) => {
+    return {...userDetails, ...accountDetails};
+}
 
 
+// call 
+const combineResult : User & Account  =  combineUserAndAccount(user, account);
+console.log(combineResult);

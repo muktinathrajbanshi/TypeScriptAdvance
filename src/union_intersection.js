@@ -11,23 +11,20 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var employee = {
-    name: "Muktinath",
-    age: 23,
-    emp_id: 11,
-    department: "IT"
+var user = {
+    id: 143,
+    name: "Muktinath Rajbanshi",
+    email: "muktinathrajbanshi786@gmail.com"
 };
-var myPersonalInfo = {
-    name: "Muktinath",
-    age: 23
+var account = {
+    acc_id: 120,
+    acc_type: "Saving",
+    balance: 2000000
 };
-var user = { name: "Muktinath", age: 23 };
-var myLocation = { city: "Kathmandu", country: "Nepal" };
 // define 
-var createUserProfile = function (user, location) {
-    // return `My name is ${user.name} and I am living in city: ${location.city}`
-    return __assign(__assign({}, user), location);
+var combineUserAndAccount = function (userDetails, accountDetails) {
+    return __assign(__assign({}, userDetails), accountDetails);
 };
 // call 
-var myCompleteInfo = createUserProfile(user, myLocation);
-console.log(myCompleteInfo);
+var combineResult = combineUserAndAccount(user, account);
+console.log(combineResult);
