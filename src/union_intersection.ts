@@ -101,3 +101,17 @@ type MyLocation = {
 }
 
 const user : User = { name : "Muktinath", age : 23 }
+const myLocation : MyLocation = { city : "Kathmandu", country : "Nepal" }
+
+// define 
+const createUserProfile = (user : User, location : MyLocation) => {
+
+    // return `My name is ${user.name} and I am living in city: ${location.city}`
+    return {...user, ...location}
+
+}
+
+// call 
+const myCompleteInfo : User & MyLocation = createUserProfile(user, myLocation);
+console.log(myCompleteInfo);
+
