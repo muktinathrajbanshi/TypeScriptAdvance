@@ -2,48 +2,20 @@
 //* object's shape. It specifies the properties and their types that an object must have to be considered
 //* of that particular interface type. Interfaces are primarily used for type-checking during development 
 //* do not generate any JavaScript code at runtime
-
-interface Greet {
-  name : string;
-age : number
-}
-
-const greet : Greet = {
-    name : "muktinath",
-    age : 23
-}
-
-
-//todo Create a Product Object:
-//? Define an interface or type representing a product with properties for name, price, and quantity.
-//? Create a product object with the following data:
-//* Name : "Laptop"
-//* Price : 1000
-//* Quantity: 5
-
-interface Products {
-    name : string;
-    price : number;
-    quantity : number
-}
-
-const product1 : Products = {
-    name : "laptop",
-    price : 10000,
-    quantity : 5
-}
-
-
+var greet = {
+    name: "muktinath",
+    age: 23
+};
+var product1 = {
+    name: "laptop",
+    price: 10000,
+    quantity: 5
+};
 //! Calculate Total Price:
 //? Given the product object from the previous question, write a function called calculateTotalPrice that
 //? calculates and returns the total price (price * quantity) of the product.
-
-const calculateTotalPrice = (product : Products): number => {
-    const { price, quantity } = product;
-
+var calculateTotalPrice = function (product) {
+    var price = product.price, quantity = product.quantity;
     return price * quantity;
-}
-
+};
 console.log(calculateTotalPrice(product1));
-
-
