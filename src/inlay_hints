@@ -1,0 +1,12 @@
+// Variable type inlay hints show the types of variables that don't have explicit type annotations.
+// Setting: typescript.inlayHints.variableTypes.enabled
+
+// Property type inlay hints show the type of class properties that don't have an explicit type annotation.
+// Setting: typescript.inlayHints.propertyDeclarationTypes.enabled
+
+// Parameter type hints show the types of implicitly typed parameters.
+// Setting: typescript.inlayHints.parameterTypes.enabled
+
+
+// Return type inlay hints show the return types of functions that don't have an explicit type annotation.
+// Setting: typescript.inlayHints.functionLikeReturnTypes.enabled
