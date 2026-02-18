@@ -36,7 +36,7 @@ function add(a, b) {
     console.log(typeof a);
     console.log(typeof b);
 }
-var result1 = add(5, 10); // Output: 15
-var result2 = add("Hello, ", "world!"); // Output: "Hello, world!"
+var result1 = add(5, "10"); // Output: 15
+var result2 = add("Hello, ", 5); // Output: "Hello, world!"
 // console.log(result1);
 // console.log(result2);

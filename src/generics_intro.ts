@@ -46,16 +46,18 @@
 // }
 
 
-function add<T>(a:T, b:T) {
+function add<T,U>(a:T, b:U, c:boolean) {
     console.log(typeof a);
     console.log(typeof b);
+    console.log(typeof c);
+    
     
     
 }
 
 
-const result1  = add<number>(5, 10); // Output: 15
-const result2  = add<string>("Hello, ", "world!"); // Output: "Hello, world!"
+const result1  = add<number, string>(5, "10", true); // Output: 15
+const result2  = add<string, number>("Hello, ", 5, false); // Output: "Hello, world!"
 
 // console.log(result1);
 // console.log(result2);
