@@ -29,10 +29,14 @@
 //  function add(a: any, b: any) : any {
 //     return a + b;
 //  }
+// function add<T>(a: T, b: T): T {
+//     return (a as any) + (b as any) ;
+// }
 function add(a, b) {
-    return a + b;
+    console.log(typeof a);
+    console.log(typeof b);
 }
 var result1 = add(5, 10); // Output: 15
 var result2 = add("Hello, ", "world!"); // Output: "Hello, world!"
-console.log(result1);
-console.log(result2);
+// console.log(result1);
+// console.log(result2);

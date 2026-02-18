@@ -41,15 +41,24 @@
 //     return a + b;
 //  }
 
-function add<T>(a: T, b: T): T {
-    return (a as any) + (b as any) ;
+// function add<T>(a: T, b: T): T {
+//     return (a as any) + (b as any) ;
+// }
+
+
+function add<T>(a:T, b:T) {
+    console.log(typeof a);
+    console.log(typeof b);
+    
+    
 }
 
 
+const result1  = add<number>(5, 10); // Output: 15
+const result2  = add<string>("Hello, ", "world!"); // Output: "Hello, world!"
 
-const result1 : number = add<number>(5, 10); // Output: 15
-const result2 : string = add<string>("Hello, ", "world!"); // Output: "Hello, world!"
+// console.log(result1);
+// console.log(result2);
 
-console.log(result1);
-console.log(result2);
+
 
