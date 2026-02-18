@@ -8,9 +8,12 @@ function logAndReturn(value : number | string): number | string {
 }
 
 
-const numberResult : string | number = logAndReturn(value: 42);
-const stringResult : string | number = logAndReturn(value: "Hello, Generics");
+const numberResult : string | number = logAndReturn(42);
+const stringResult : string | number = logAndReturn("Hello, Generics");
+const booleanResult  = logAndReturn(true);
 
 console.log(numberResult);
 console.log(stringResult);
+console.log(booleanResult);
+
 
