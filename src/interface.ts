@@ -3,7 +3,15 @@
 //* of that particular interface type. Interfaces are primarily used for type-checking during development 
 //* do not generate any JavaScript code at runtime
 
+interface Greet {
+  name : string;
+age : number
+}
 
+const greet : Greet = {
+    name : "muktinath",
+    age : 23
+}
 
 
 //todo Create a Product Object:
