@@ -11,10 +11,26 @@
 
 
 class Persons {
-    name : string = "Muktinath Rajbanshi";
-    age : number = 14;
-    hobbies : string[] = ["reading", "painting"];
+    name : string;
+    age : number;
+    hobbies : string[];
+
+
+    constructor(name:string, age:number, hobbies:string[]) {
+        this.name = name;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+
 }
 
-const person1 : Persons = new Persons();
-console.log(person1.hobbies);
+const person1 : Persons = new Persons("muktinath", 14, ["reading", "painting"]);
+const person2 : Persons = new Persons("rajbanshi", 15, ["coding", "sports"]);
+const person3 : Persons = new Persons("mukti", 16, ["singing", "coding"]);
+
+
+console.log(person3);
+
+
+
+

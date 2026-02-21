@@ -7,12 +7,14 @@
 //? class names. This means that class names should start with a capital letter and each
 //? subsequent word in the class name should also begin with a capital letter.
 var Persons = /** @class */ (function () {
-    function Persons() {
-        this.name = "Muktinath Rajbanshi";
-        this.age = 14;
-        this.hobbies = ["reading", "painting"];
+    function Persons(name, age, hobbies) {
+        this.name = name;
+        this.age = age;
+        this.hobbies = hobbies;
     }
     return Persons;
 }());
-var person1 = new Persons();
-console.log(person1.hobbies);
+var person1 = new Persons("muktinath", 14, ["reading", "painting"]);
+var person2 = new Persons("rajbanshi", 15, ["coding", "sports"]);
+var person3 = new Persons("mukti", 16, ["singing", "coding"]);
+console.log(person3);
