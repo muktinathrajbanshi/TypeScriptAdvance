@@ -38,7 +38,7 @@ var Student = /** @class */ (function (_super) {
         return _this;
     }
     Student.prototype.introduce = function () {
-        return "Hi, I'm ".concat(this.name, " and I'm ").concat(this.age, " years old.\n         I am in grade ").concat(this.grade, "\n         I love ").concat(this.hobbies.join(", "), ".");
+        return "".concat(_super.prototype.introduce.call(this), ". I am in grade ").concat(this.grade);
     };
     return Student;
 }(Persons));

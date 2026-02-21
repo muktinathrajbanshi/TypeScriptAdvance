@@ -34,9 +34,7 @@ class Student extends Persons {
     }
 
     introduce(): string{
-        return `Hi, I'm ${this.name} and I'm ${this.age} years old.
-         I am in grade ${this.grade}
-         I love ${this.hobbies.join(", ")}.`
+        return `${super.introduce()}. I am in grade ${this.grade}`;
     }
 }
 
