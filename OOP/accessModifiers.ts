@@ -19,11 +19,9 @@ class Persons {
 }
 
 class Student extends Persons {
-    grade : number;
 
-    constructor(name:string, age:number, hobbies:string[], grade : number) {
+    constructor(name:string, age:number, hobbies:string[], public grade : number) {
         super(name, age, hobbies);
-        this.grade = grade;
     }
 
     introduce(): string[]{
