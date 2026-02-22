@@ -6,16 +6,11 @@
 
 
 class Persons {
-    public name : string;
-    protected age : number;
-    private hobbies : string[];
-
-
-    constructor(name:string, age:number, hobbies:string[]) {
-        this.name = name;
-        this.age = age;
-        this.hobbies = hobbies;
-    }
+    constructor(
+        public name:string, 
+        public age:number, 
+        protected hobbies:string[]
+    ) {}
 
     introduceParent(): string{
         return `Hi, I'm ${this.name} and I'm ${this.age} years old. I love ${this.hobbies.join(", ")}.`
