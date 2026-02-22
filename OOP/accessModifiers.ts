@@ -8,7 +8,7 @@
 class Persons {
     public name : string;
     protected age : number;
-    protected hobbies : string[];
+    private hobbies : string[];
 
 
     constructor(name:string, age:number, hobbies:string[]) {
