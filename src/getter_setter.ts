@@ -8,6 +8,30 @@
 
 //TODO The get method doesn't take any parameters, and the set method takes only one parameter.
 
+
+
+class Persons {
+    constructor(
+        public name:string, 
+        public age:number, 
+        protected hobbies:string[]
+    ) {}
+
+    introduceParent(): string{
+        return `Hi, I'm ${this.name} and I'm ${this.age} years old. I love ${this.hobbies.join(", ")}.`
+    }
+
+}
+
+
+const person1 : Persons = new Persons("muktinath", 14, ["reading", "painting"]);
+const person2 : Persons = new Persons("rajbanshi", 15, ["coding", "sports"]);
+
+
+console.log(person1.introduceParent());
+
+
+
 //* PRACTICE TIME
 //? Q1: Bank Account Balance
 //* Create a TypeScript class BankAccount with a private property _balance initialized to 0.
