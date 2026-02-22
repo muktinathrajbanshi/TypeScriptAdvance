@@ -11,11 +11,20 @@
 
 
 class Persons {
+    private _age:number |undefined;
     constructor(
         public name:string, 
-        public age:number, 
         protected hobbies:string[]
-    ) {}
+    ) {
+       
+    }
+
+    public set age(age : number) {
+         if(age > 150 || this.age < 0) {
+            throw new Error("age is not valid");
+        }
+        this.age = age;
+    }
 
     introduceParent(): string{
         return `Hi, I'm ${this.name} and I'm ${this.age} years old. I love ${this.hobbies.join(", ")}.`
@@ -25,6 +34,9 @@ class Persons {
 
 
 const person1 : Persons = new Persons("muktinath", 14, ["reading", "painting"]);
+
+person1.age = 512;
+
 const person2 : Persons = new Persons("rajbanshi", 15, ["coding", "sports"]);
 
 

@@ -10,6 +10,9 @@ var Persons = /** @class */ (function () {
         this.name = name;
         this.age = age;
         this.hobbies = hobbies;
+        if (this.age > 150 || this.age < 0) {
+            throw new Error("age is not valid");
+        }
     }
     Persons.prototype.introduceParent = function () {
         return "Hi, I'm ".concat(this.name, " and I'm ").concat(this.age, " years old. I love ").concat(this.hobbies.join(", "), ".");
@@ -17,6 +20,7 @@ var Persons = /** @class */ (function () {
     return Persons;
 }());
 var person1 = new Persons("muktinath", 14, ["reading", "painting"]);
+person1.age = 512;
 var person2 = new Persons("rajbanshi", 15, ["coding", "sports"]);
 console.log(person1.introduceParent());
 //* PRACTICE TIME
