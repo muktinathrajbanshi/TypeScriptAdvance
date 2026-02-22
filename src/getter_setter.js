@@ -6,22 +6,33 @@
 //? methods allow you to set the value of a property with additional logic or validation.
 //TODO The get method doesn't take any parameters, and the set method takes only one parameter.
 var Persons = /** @class */ (function () {
-    function Persons(name, age, hobbies) {
+    function Persons(name, hobbies) {
         this.name = name;
-        this.age = age;
         this.hobbies = hobbies;
-        if (this.age > 150 || this.age < 0) {
-            throw new Error("age is not valid");
-        }
     }
+    Object.defineProperty(Persons.prototype, "age", {
+        set: function (age) {
+            if (age > 150 || this.age < 0) {
+                throw new Error("age is not valid");
+            }
+            this._age = age;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    // public get age() {
+    //     if(this._age === undefined) {
+    //         throw new Error("age is not defined");
+    //     }
+    //     return this._age;
+    // }
     Persons.prototype.introduceParent = function () {
-        return "Hi, I'm ".concat(this.name, " and I'm ").concat(this.age, " years old. I love ").concat(this.hobbies.join(", "), ".");
+        return "Hi, I'm ".concat(this.name, " and I'm ").concat(this._age, " years old. I love ").concat(this.hobbies.join(", "), ".");
     };
     return Persons;
 }());
-var person1 = new Persons("muktinath", 14, ["reading", "painting"]);
-person1.age = 512;
-var person2 = new Persons("rajbanshi", 15, ["coding", "sports"]);
+var person1 = new Persons("muktinath", ["reading", "painting"]);
+person1.age = 12;
 console.log(person1.introduceParent());
 //* PRACTICE TIME
 //? Q1: Bank Account Balance
