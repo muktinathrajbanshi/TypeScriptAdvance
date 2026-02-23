@@ -64,31 +64,28 @@
 //* Try setting a negative balance using the setter. What output do you expect?
 
 
-class BankAccount {
-    private  _balance : number = 0;
+// class BankAccount {
+//     private  _balance : number = 0;
 
-    get balance() : number {
-        return this._balance;
-    }
+//     get balance() : number {
+//         return this._balance;
+//     }
 
-    set balance(value : number) {
-        if (value >= 0) {
-            this._balance = value;
-        } else {
-            console.log("Error: Balance cannot be negative!");
-        }
-    }
-}
+//     set balance(value : number) {
+//         if (value >= 0) {
+//             this._balance = value;
+//         } else {
+//             console.log("Error: Balance cannot be negative!");
+//         }
+//     }
+// }
 
-const myAccount = new BankAccount();
+// const myAccount = new BankAccount();
 
-// myAccount.balance = 1000;
-// console.log("Current Balance : ", myAccount.balance);
-myAccount.balance = -500;
-console.log("Final Balance : ", myAccount.balance);
-
-
-
+// // myAccount.balance = 1000;
+// // console.log("Current Balance : ", myAccount.balance);
+// myAccount.balance = -500;
+// console.log("Final Balance : ", myAccount.balance);
 
 
 
@@ -102,3 +99,35 @@ console.log("Final Balance : ", myAccount.balance);
 //* Use the setter to set the temperature in Celsius to 25 and then use the getter for Fahrenheit. What
 //* Fahrenheit value do you expect?
 //* Use the setter to set the temperature in Fahrenheit to 98.6 and then use the getter for Celsius.
+
+
+class Temperature {
+    private _celsius : number = 0;
+
+    get celsius() {
+        return this._celsius;
+    }
+
+    set celsius(value : number) {
+        this._celsius = value;
+    }
+
+    get fahrenheit() :number {
+        return (this._celsius * 9 / 5) + 32;
+    }
+
+    set fahrenheit(value : number) {
+        this._celsius =  (value - 32) *  5/9;
+    }
+
+}
+
+const temp = new Temperature();
+
+temp.celsius = 25;
+
+console.log("Fahrenheit", temp.fahrenheit);
+
+temp.fahrenheit = 98.6;
+
+console.log("Celsius:", temp.celsius);
