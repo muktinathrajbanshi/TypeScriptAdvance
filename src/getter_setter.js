@@ -5,37 +5,34 @@
 //? of class properties. Getter methods allow you to retrieve the value of a property, while setter 
 //? methods allow you to set the value of a property with additional logic or validation.
 //TODO The get method doesn't take any parameters, and the set method takes only one parameter.
-var Persons = /** @class */ (function () {
-    function Persons(name, hobbies) {
-        this.name = name;
-        this.hobbies = hobbies;
-    }
-    Object.defineProperty(Persons.prototype, "age", {
-        set: function (age) {
-            if (age > 150 || age < 0) {
-                throw new Error("age is not valid");
-            }
-            this._age = age;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    // public get age() {
-    //     if(this._age === undefined) {
-    //         throw new Error("age is not defined");
-    //     }
-    //     return this._age;
-    // }
-    Persons.prototype.introduceParent = function () {
-        return "Hi, I'm ".concat(this.name, " and I'm ").concat(this._age, " years old. I love ").concat(this.hobbies.join(", "), ".");
-    };
-    return Persons;
-}());
-var person1 = new Persons("muktinath", ["reading", "painting"]);
-person1.age = 12;
+// class Persons {
+//     private _age:number |undefined;
+//     constructor(
+//         public name:string, 
+//         protected hobbies:string[]
+//     ) {
+//     }
+//     public set age(age : number) {
+//          if(age > 150 || age < 0) {
+//             throw new Error("age is not valid");
+//         }
+//         this._age = age;
+//     }
+//     public get age() {
+//         if(this._age === undefined) {
+//             throw new Error("age is not defined");
+//         }
+//         return this._age;
+//     }
+//     introduceParent(): string{
+//         return `Hi, I'm ${this.name} and I'm ${this._age} years old. I love ${this.hobbies.join(", ")}.`
+//     }
+// }
+// const person1 : Persons = new Persons("muktinath", ["reading", "painting"]);
+// person1.age = 12;
+// // console.log(person1.age);
+// console.log(person1.introduceParent());
 // console.log(person1.age);
-console.log(person1.introduceParent());
-console.log(person1.age);
 //* PRACTICE TIME
 //? Q1: Bank Account Balance
 //* Create a TypeScript class BankAccount with a private property _balance initialized to 0.
@@ -45,6 +42,32 @@ console.log(person1.age);
 //* Instantiate an object of the BankAccount class.
 //* Use the setter to set the balance to 1000 and use the getter to display the updated balance.
 //* Try setting a negative balance using the setter. What output do you expect?
+var BankAccount = /** @class */ (function () {
+    function BankAccount() {
+        this._balance = 0;
+    }
+    Object.defineProperty(BankAccount.prototype, "balance", {
+        get: function () {
+            return this._balance;
+        },
+        set: function (value) {
+            if (value >= 0) {
+                this._balance = value;
+            }
+            else {
+                console.log("Error: Balance cannot be negative!");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return BankAccount;
+}());
+var myAccount = new BankAccount();
+// myAccount.balance = 1000;
+// console.log("Current Balance : ", myAccount.balance);
+myAccount.balance = -500;
+console.log("Final Balance : ", myAccount.balance);
 //? Q2: Temperature Converter
 //* Define a TypeScript class Temperature with a private property _celsius set to 0.
 //* Implement a getter method celsius that returns the temperature in Celsius.

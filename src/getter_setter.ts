@@ -10,45 +10,45 @@
 
 
 
-class Persons {
-    private _age:number |undefined;
-    constructor(
-        public name:string, 
-        protected hobbies:string[]
-    ) {
+// class Persons {
+//     private _age:number |undefined;
+//     constructor(
+//         public name:string, 
+//         protected hobbies:string[]
+//     ) {
        
-    }
+//     }
 
-    public set age(age : number) {
-         if(age > 150 || age < 0) {
-            throw new Error("age is not valid");
-        }
-        this._age = age;
-    }
+//     public set age(age : number) {
+//          if(age > 150 || age < 0) {
+//             throw new Error("age is not valid");
+//         }
+//         this._age = age;
+//     }
 
-    public get age() {
-        if(this._age === undefined) {
-            throw new Error("age is not defined");
-        }
-        return this._age;
-    }
+//     public get age() {
+//         if(this._age === undefined) {
+//             throw new Error("age is not defined");
+//         }
+//         return this._age;
+//     }
 
-    introduceParent(): string{
-        return `Hi, I'm ${this.name} and I'm ${this._age} years old. I love ${this.hobbies.join(", ")}.`
-    }
+//     introduceParent(): string{
+//         return `Hi, I'm ${this.name} and I'm ${this._age} years old. I love ${this.hobbies.join(", ")}.`
+//     }
 
-}
+// }
 
 
-const person1 : Persons = new Persons("muktinath", ["reading", "painting"]);
+// const person1 : Persons = new Persons("muktinath", ["reading", "painting"]);
 
-person1.age = 12;
+// person1.age = 12;
+// // console.log(person1.age);
+
+
+
+// console.log(person1.introduceParent());
 // console.log(person1.age);
-
-
-
-console.log(person1.introduceParent());
-console.log(person1.age);
 
 
 
@@ -62,6 +62,34 @@ console.log(person1.age);
 //* Instantiate an object of the BankAccount class.
 //* Use the setter to set the balance to 1000 and use the getter to display the updated balance.
 //* Try setting a negative balance using the setter. What output do you expect?
+
+
+class BankAccount {
+    private  _balance : number = 0;
+
+    get balance() : number {
+        return this._balance;
+    }
+
+    set balance(value : number) {
+        if (value >= 0) {
+            this._balance = value;
+        } else {
+            console.log("Error: Balance cannot be negative!");
+        }
+    }
+}
+
+const myAccount = new BankAccount();
+
+// myAccount.balance = 1000;
+// console.log("Current Balance : ", myAccount.balance);
+myAccount.balance = -500;
+console.log("Final Balance : ", myAccount.balance);
+
+
+
+
 
 
 //? Q2: Temperature Converter
