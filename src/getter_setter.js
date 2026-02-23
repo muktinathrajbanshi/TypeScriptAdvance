@@ -12,7 +12,7 @@ var Persons = /** @class */ (function () {
     }
     Object.defineProperty(Persons.prototype, "age", {
         set: function (age) {
-            if (age > 150 || this.age < 0) {
+            if (age > 150 || age < 0) {
                 throw new Error("age is not valid");
             }
             this._age = age;
@@ -33,7 +33,9 @@ var Persons = /** @class */ (function () {
 }());
 var person1 = new Persons("muktinath", ["reading", "painting"]);
 person1.age = 12;
+// console.log(person1.age);
 console.log(person1.introduceParent());
+console.log(person1.age);
 //* PRACTICE TIME
 //? Q1: Bank Account Balance
 //* Create a TypeScript class BankAccount with a private property _balance initialized to 0.

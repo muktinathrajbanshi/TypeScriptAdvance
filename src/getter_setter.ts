@@ -20,18 +20,18 @@ class Persons {
     }
 
     public set age(age : number) {
-         if(age > 150 || this.age < 0) {
+         if(age > 150 || age < 0) {
             throw new Error("age is not valid");
         }
         this._age = age;
     }
 
-    // public get age() {
-    //     if(this._age === undefined) {
-    //         throw new Error("age is not defined");
-    //     }
-    //     return this._age;
-    // }
+    public get age() {
+        if(this._age === undefined) {
+            throw new Error("age is not defined");
+        }
+        return this._age;
+    }
 
     introduceParent(): string{
         return `Hi, I'm ${this.name} and I'm ${this._age} years old. I love ${this.hobbies.join(", ")}.`
@@ -43,9 +43,13 @@ class Persons {
 const person1 : Persons = new Persons("muktinath", ["reading", "painting"]);
 
 person1.age = 12;
+// console.log(person1.age);
+
 
 
 console.log(person1.introduceParent());
+console.log(person1.age);
+
 
 
 
