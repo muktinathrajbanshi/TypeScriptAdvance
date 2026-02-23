@@ -44,10 +44,10 @@
 //* Try setting a negative balance using the setter. What output do you expect?
 // class BankAccount {
 //     private  _balance : number = 0;
-//     get balance() : number {
+//     public get balance() : number {
 //         return this._balance;
 //     }
-//     set balance(value : number) {
+//     public set balance(value : number) {
 //         if (value >= 0) {
 //             this._balance = value;
 //         } else {

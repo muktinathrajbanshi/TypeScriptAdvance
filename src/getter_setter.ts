@@ -67,11 +67,11 @@
 // class BankAccount {
 //     private  _balance : number = 0;
 
-//     get balance() : number {
+//     public get balance() : number {
 //         return this._balance;
 //     }
 
-//     set balance(value : number) {
+//     public set balance(value : number) {
 //         if (value >= 0) {
 //             this._balance = value;
 //         } else {
@@ -104,19 +104,19 @@
 class Temperature {
     private _celsius : number = 0;
 
-    get celsius() {
+    public get celsius() : number {
         return this._celsius;
     }
 
-    set celsius(value : number) {
+    public set celsius(value : number) {
         this._celsius = value;
     }
 
-    get fahrenheit() :number {
+    public get fahrenheit() :number {
         return (this._celsius * 9 / 5) + 32;
     }
 
-    set fahrenheit(value : number) {
+    public set fahrenheit(value : number) {
         this._celsius =  (value - 32) *  5/9;
     }
 
