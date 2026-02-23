@@ -33,9 +33,13 @@ var MathOperations = /** @class */ (function () {
     MathOperations.multiplication = function (num1, num2) {
         return num1 * num2;
     };
+    MathOperations.modulus = function (num1, num2) {
+        return num1 % num2;
+    };
     MathOperations.PI = Math.PI;
     return MathOperations;
 }());
 console.log(MathOperations);
 console.log(MathOperations.division(10, 2));
 console.log(MathOperations.multiplication(10, 5));
+console.log(MathOperations.modulus(40, 3));

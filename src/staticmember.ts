@@ -46,8 +46,13 @@ class MathOperations {
         return num1 * num2;
     }
 
+      public static modulus(num1 : number, num2 : number) : number{
+        return num1 % num2;
+    }
+
 }
 
 console.log(MathOperations);
 console.log(MathOperations.division(10,2));
 console.log(MathOperations.multiplication(10, 5));
+console.log(MathOperations.modulus(40, 3));
