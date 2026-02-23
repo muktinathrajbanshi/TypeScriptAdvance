@@ -42,32 +42,24 @@
 //* Instantiate an object of the BankAccount class.
 //* Use the setter to set the balance to 1000 and use the getter to display the updated balance.
 //* Try setting a negative balance using the setter. What output do you expect?
-var BankAccount = /** @class */ (function () {
-    function BankAccount() {
-        this._balance = 0;
-    }
-    Object.defineProperty(BankAccount.prototype, "balance", {
-        get: function () {
-            return this._balance;
-        },
-        set: function (value) {
-            if (value >= 0) {
-                this._balance = value;
-            }
-            else {
-                console.log("Error: Balance cannot be negative!");
-            }
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return BankAccount;
-}());
-var myAccount = new BankAccount();
-// myAccount.balance = 1000;
-// console.log("Current Balance : ", myAccount.balance);
-myAccount.balance = -500;
-console.log("Final Balance : ", myAccount.balance);
+// class BankAccount {
+//     private  _balance : number = 0;
+//     get balance() : number {
+//         return this._balance;
+//     }
+//     set balance(value : number) {
+//         if (value >= 0) {
+//             this._balance = value;
+//         } else {
+//             console.log("Error: Balance cannot be negative!");
+//         }
+//     }
+// }
+// const myAccount = new BankAccount();
+// // myAccount.balance = 1000;
+// // console.log("Current Balance : ", myAccount.balance);
+// myAccount.balance = -500;
+// console.log("Final Balance : ", myAccount.balance);
 //? Q2: Temperature Converter
 //* Define a TypeScript class Temperature with a private property _celsius set to 0.
 //* Implement a getter method celsius that returns the temperature in Celsius.
@@ -78,3 +70,34 @@ console.log("Final Balance : ", myAccount.balance);
 //* Use the setter to set the temperature in Celsius to 25 and then use the getter for Fahrenheit. What
 //* Fahrenheit value do you expect?
 //* Use the setter to set the temperature in Fahrenheit to 98.6 and then use the getter for Celsius.
+var Temperature = /** @class */ (function () {
+    function Temperature() {
+        this._celsius = 0;
+    }
+    Object.defineProperty(Temperature.prototype, "celsius", {
+        get: function () {
+            return this._celsius;
+        },
+        set: function (value) {
+            this._celsius = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Temperature.prototype, "fahrenheit", {
+        get: function () {
+            return (this._celsius * 9 / 5) + 32;
+        },
+        set: function (value) {
+            this._celsius = (value - 32) * 5 / 9;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Temperature;
+}());
+var temp = new Temperature();
+temp.celsius = 25;
+console.log("Fahrenheit", temp.fahrenheit);
+temp.fahrenheit = 98.6;
+console.log("Celsius:", temp.celsius);
