@@ -13,7 +13,15 @@
 var MathOperations = /** @class */ (function () {
     function MathOperations() {
     }
+    MathOperations.add = function (num1, num2) {
+        return num1 + num2;
+    };
+    MathOperations.subs = function (num1, num2) {
+        return num1 - num2;
+    };
     MathOperations.PI = Math.PI;
     return MathOperations;
 }());
 console.log(MathOperations);
+console.log(MathOperations.add(5, 10));
+console.log(MathOperations.subs(10, 5));
