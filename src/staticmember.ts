@@ -15,22 +15,39 @@
 
 // const user1 = new Person("muktinath");
 
+// class MathOperations {
+//     public static PI : number = Math.PI;
+
+//     public static add(num1 : number, num2 : number) : number{
+//         return num1 + num2;
+//     }
+
+//     public static subs(num1 : number, num2 : number) : number{
+//         return num1 - num2;
+//     }
+
+// }
+
+// console.log(MathOperations);
+// console.log(MathOperations.add(5,10));
+// console.log(MathOperations.subs(10, 5));
+
+// Practice time
+// Div, Mult, Modules
+
 class MathOperations {
     public static PI : number = Math.PI;
 
-    public static add(num1 : number, num2 : number) : number{
-        return num1 + num2;
+    public static division(num1 : number, num2 : number) : number{
+        return num1 / num2;
     }
 
-    public static subs(num1 : number, num2 : number) : number{
-        return num1 - num2;
+    public static multiplication(num1 : number, num2 : number) : number{
+        return num1 * num2;
     }
 
 }
 
 console.log(MathOperations);
-console.log(MathOperations.add(5,10));
-console.log(MathOperations.subs(10, 5));
-
-
-
+console.log(MathOperations.division(10,2));
+console.log(MathOperations.multiplication(10, 5));
