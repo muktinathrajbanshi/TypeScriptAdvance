@@ -11,3 +11,6 @@
 //? shapes. You can use an abstract base class Shape to define common properties and methods that all
 //? shapes share..
 
+//* Practice Time
+//? You need to do the same for Square and Rectangle and if possible use getter and setter methods
+//? members
