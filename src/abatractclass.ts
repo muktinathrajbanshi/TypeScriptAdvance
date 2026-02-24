@@ -5,3 +5,9 @@
 //* Abstract classes focus on class inheritance and sharing common functionality, whereas the
 //* useContext hook in React focuses on managing global state and allowing components to consume that
 //* state.
+
+//? Example : Shape Hierarchy
+//? Suppose you're building a graphics application, and you want to create a hierarchy of different 
+//? shapes. You can use an abstract base class Shape to define common properties and methods that all
+//? shapes share..
+
