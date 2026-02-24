@@ -47,9 +47,20 @@ class Circle extends Shape{
         super(color: color);
      }
 
-     calculateArea() : number;
+     public calculateArea(): number {
+        return Math.PI * this.radius * this.radius;
+     }
 
+     displayArea = () => {
+        console.log(`This is a ${this.color} circle with radius ${this.radius}`);
+        
+     };
 }
+
+const circle = new Circle("red", 5);
+console.log(circle.calculateArea());
+
+circle.displayArea()
 
 
 //* Practice Time
