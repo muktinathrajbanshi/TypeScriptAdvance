@@ -6,6 +6,26 @@
 //* useContext hook in React focuses on managing global state and allowing components to consume that
 //* state.
 
+interface PerObj {
+    name : string; 
+    age: number;
+}
+
+const Person:PerObj  = {
+    name: "muktinath",
+    age: 23,
+};
+
+const Person1:PerObj = {
+    name: "milan",
+    age: 23,
+};
+
+const Person3:PerObj = {
+    name: "rajbanshi",
+    age: 23,
+};
+
 //? Example : Shape Hierarchy
 //? Suppose you're building a graphics application, and you want to create a hierarchy of different 
 //? shapes. You can use an abstract base class Shape to define common properties and methods that all
