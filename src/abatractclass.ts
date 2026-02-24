@@ -44,7 +44,7 @@ abstract class Shape {
 
 class Circle extends Shape{
      constructor( protected color: string, protected radius: number ) {
-        super(color: color);
+        super(color);
      }
 
      public calculateArea(): number {
