@@ -35,8 +35,20 @@
 // circle, rectangle
 
 abstract class Shape {
+
+    constructor( protected color: string ) {}
+
     abstract calculateArea() : number;
     abstract displayArea: () => void;
+}
+
+class Circle extends Shape{
+     constructor( protected color: string, protected radius: number ) {
+        super(color: color);
+     }
+
+     calculateArea() : number;
+
 }
 
 
