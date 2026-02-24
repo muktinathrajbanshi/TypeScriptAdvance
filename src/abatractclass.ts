@@ -34,35 +34,61 @@
 
 // circle, rectangle
 
-abstract class Shape {
+// abstract class Shape {
 
-    constructor( protected color: string ) {}
+//     constructor( protected color: string ) {}
 
-    abstract calculateArea() : number;
-    abstract displayArea: () => void;
-}
+//     abstract calculateArea() : number;
+//     abstract displayArea: () => void;
+// }
 
-class Circle extends Shape{
-     constructor( protected color: string, protected radius: number ) {
-        super(color);
-     }
+// class Circle extends Shape{
+//      constructor( protected color: string, protected radius: number ) {
+//         super(color);
+//      }
 
-     public calculateArea(): number {
-        return Math.PI * this.radius * this.radius;
-     }
+//      public calculateArea(): number {
+//         return Math.PI * this.radius * this.radius;
+//      }
 
-     displayArea = () => {
-        console.log(`This is a ${this.color} circle with radius ${this.radius}`);
+//      displayArea = () => {
+//         console.log(`This is a ${this.color} circle with radius ${this.radius}`);
         
-     };
-}
+//      };
+// }
 
-const circle = new Circle("red", 5);
-console.log(circle.calculateArea());
+// const circle = new Circle("red", 5);
+// console.log(circle.calculateArea());
 
-circle.displayArea()
+// circle.displayArea()
 
 
 //* Practice Time
 //? You need to do the same for Square and Rectangle and if possible use getter and setter methods
 //? members
+
+abstract class Shape {
+    constructor(protected _color : string) {}
+
+    get color() : string {
+        return this._color;
+    }
+
+    set color(value : string) {
+        this._color = value;
+    }
+
+    abstract calculateArea() : number;
+    abstract displayArea : () => void;
+}
+
+class Circle extends Shape {
+
+    constructor(color : string, protected _radius : number) {
+        super(color);
+    }
+
+}
+
+const circle = new Circle("red", 5);
+console.log(circle.calculateArea());
