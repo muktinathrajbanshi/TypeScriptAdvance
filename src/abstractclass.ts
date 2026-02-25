@@ -139,6 +139,46 @@ class Square extends Shape {
 
 }
 
+// for rectangle 
+
+class Rectangle extends Shape {
+
+    constructor(color : string, protected _length: number, protected _width : number) {
+        super(color);
+    }
+
+    get length(): number {
+        return this._length;
+    }
+
+    set length(value: number) {
+        if (value <= 0) {
+            throw new Error("Length must be positive");
+        }
+        this._length = value;
+    }
+
+    get width(): number {
+        return this._width;
+    }
+
+    set width(value: number) {
+        if (value <= 0) {
+            throw new Error("Width must be positive");
+        }
+         this._width = value;
+    }
+
+    calculateArea(): number {
+        return this._length * this._width;
+    }
+
+    displayArea = () => {
+        console.log(`This is a ${this.color} rectangel with length ${this.length} and width ${this.width}`); 
+    };
+
+}
+
 
 
 const circle = new Circle("red", 5);
@@ -149,3 +189,8 @@ circle.displayArea();
 const square = new Square("blue", 4);
 console.log(square.calculateArea());
 square.displayArea();
+
+
+const reactangle = new Rectangle("green", 6, 3);
+console.log(reactangle.calculateArea());
+reactangle.displayArea();

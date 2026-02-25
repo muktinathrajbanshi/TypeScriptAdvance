@@ -135,9 +135,55 @@ var Square = /** @class */ (function (_super) {
     };
     return Square;
 }(Shape));
+// for rectangle 
+var Rectangle = /** @class */ (function (_super) {
+    __extends(Rectangle, _super);
+    function Rectangle(color, _length, _width) {
+        var _this = _super.call(this, color) || this;
+        _this._length = _length;
+        _this._width = _width;
+        _this.displayArea = function () {
+            console.log("This is a ".concat(_this.color, " rectangel with length ").concat(_this.length, " and width ").concat(_this.width));
+        };
+        return _this;
+    }
+    Object.defineProperty(Rectangle.prototype, "length", {
+        get: function () {
+            return this._length;
+        },
+        set: function (value) {
+            if (value <= 0) {
+                throw new Error("Length must be positive");
+            }
+            this._length = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Rectangle.prototype, "width", {
+        get: function () {
+            return this._width;
+        },
+        set: function (value) {
+            if (value <= 0) {
+                throw new Error("Width must be positive");
+            }
+            this._width = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Rectangle.prototype.calculateArea = function () {
+        return this._length * this._width;
+    };
+    return Rectangle;
+}(Shape));
 var circle = new Circle("red", 5);
 console.log(circle.calculateArea());
 circle.displayArea();
 var square = new Square("blue", 4);
 console.log(square.calculateArea());
 square.displayArea();
+var reactangle = new Rectangle("green", 6, 3);
+console.log(reactangle.calculateArea());
+reactangle.displayArea();
