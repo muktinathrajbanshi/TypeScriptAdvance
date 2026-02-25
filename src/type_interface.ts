@@ -12,18 +12,44 @@
 
 //* same Interface name treated as one
 
-type Student = {
+// type Student = {
+//     name: string;
+//     age: number;
+// };
+
+// type StudentAddress = {
+//     city: string;
+//     state: string;
+// };
+
+// type Data = Student | StudentAddress;
+
+// const Biodata: Data = {
+//     name: "muktinath",
+//     city: "KTM",
+//     state: "Bagmati"
+// }
+
+// console.log(Biodata);
+
+
+
+
+interface Student {
     name: string;
     age: number;
 };
 
-type StudentAddress = {
+interface StudentAddress {
     city: string;
     state: string;
 };
 
-const Biodata: Student | StudentAddress = {
+interface Data extends Student , StudentAddress {}
+
+const Biodata: Data = {
     name: "muktinath",
+    age: 23,
     city: "KTM",
     state: "Bagmati"
 }
