@@ -106,5 +106,38 @@ var Circle = /** @class */ (function (_super) {
     };
     return Circle;
 }(Shape));
+// for square
+var Square = /** @class */ (function (_super) {
+    __extends(Square, _super);
+    function Square(color, _side) {
+        var _this = _super.call(this, color) || this;
+        _this._side = _side;
+        _this.displayArea = function () {
+            console.log("This is a ".concat(_this.color, " square with side ").concat(_this.side));
+        };
+        return _this;
+    }
+    Object.defineProperty(Square.prototype, "side", {
+        get: function () {
+            return this._side;
+        },
+        set: function (value) {
+            if (value <= 0) {
+                throw new Error("Side must be positive");
+            }
+            this._side = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Square.prototype.calculateArea = function () {
+        return this._side * this._side;
+    };
+    return Square;
+}(Shape));
 var circle = new Circle("red", 5);
 console.log(circle.calculateArea());
+circle.displayArea();
+var square = new Square("blue", 4);
+console.log(square.calculateArea());
+square.displayArea();

@@ -109,5 +109,43 @@ class Circle extends Shape {
 
 }
 
+// for square
+
+class Square extends Shape {
+
+    constructor(color : string, protected _side : number) {
+        super(color);
+    }
+
+    get side(): number {
+        return this._side;
+    }
+
+    set side(value : number) {
+        if (value <= 0) {
+            throw new Error("Side must be positive");
+        }
+        this._side = value
+    }
+
+    calculateArea(): number {
+        return this._side * this._side;
+    }
+
+    displayArea = () => {
+        console.log(`This is a ${this.color} square with side ${this.side}`);
+        
+    }
+
+}
+
+
+
 const circle = new Circle("red", 5);
 console.log(circle.calculateArea());
+circle.displayArea();
+
+
+const square = new Square("blue", 4);
+console.log(square.calculateArea());
+square.displayArea();
