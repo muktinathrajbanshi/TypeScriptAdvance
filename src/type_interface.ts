@@ -47,11 +47,16 @@ interface StudentAddress {
 
 interface Data extends Student , StudentAddress {}
 
-const Biodata: Data = {
-    name: "muktinath",
-    age: 23,
-    city: "KTM",
-    state: "Bagmati"
+class Biodata implements Data {
+    constructor(
+        public name: string,
+        public age: number,
+        public city: string,
+        public state: string
+    ) {}
 }
 
-console.log(Biodata);
+const student1 = new Biodata("muktinath", 23, "ktm", "putalisadak");
+console.log(student1);
+
+// console.log(Biodata);
