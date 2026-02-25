@@ -88,6 +88,25 @@ class Circle extends Shape {
         super(color);
     }
 
+    get radius(): number {
+        return this._radius;
+    }
+
+    set radius(value : number) {
+        if (value <= 0) {
+            throw new Error("Radius must be positive");
+        }
+        this._radius = value;
+    }
+
+    public calculateArea(): number {
+        return Math.PI * this._radius * this._radius;
+    }
+
+    displayArea = () => {
+        console.log(`This is a ${this.color} circle with radius ${this.radius}`);   
+    };
+
 }
 
 const circle = new Circle("red", 5);

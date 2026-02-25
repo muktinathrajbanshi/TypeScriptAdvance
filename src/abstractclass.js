@@ -40,31 +40,71 @@ var __extends = (this && this.__extends) || (function () {
 //? shapes. You can use an abstract base class Shape to define common properties and methods that all
 //? shapes share..
 // circle, rectangle
+// abstract class Shape {
+//     constructor( protected color: string ) {}
+//     abstract calculateArea() : number;
+//     abstract displayArea: () => void;
+// }
+// class Circle extends Shape{
+//      constructor( protected color: string, protected radius: number ) {
+//         super(color);
+//      }
+//      public calculateArea(): number {
+//         return Math.PI * this.radius * this.radius;
+//      }
+//      displayArea = () => {
+//         console.log(`This is a ${this.color} circle with radius ${this.radius}`);
+//      };
+// }
+// const circle = new Circle("red", 5);
+// console.log(circle.calculateArea());
+// circle.displayArea()
+//* Practice Time
+//? You need to do the same for Square and Rectangle and if possible use getter and setter methods
+//? members
 var Shape = /** @class */ (function () {
-    function Shape(color) {
-        this.color = color;
+    function Shape(_color) {
+        this._color = _color;
     }
+    Object.defineProperty(Shape.prototype, "color", {
+        get: function () {
+            return this._color;
+        },
+        set: function (value) {
+            this._color = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Shape;
 }());
 var Circle = /** @class */ (function (_super) {
     __extends(Circle, _super);
-    function Circle(color, radius) {
+    function Circle(color, _radius) {
         var _this = _super.call(this, color) || this;
-        _this.color = color;
-        _this.radius = radius;
+        _this._radius = _radius;
         _this.displayArea = function () {
             console.log("This is a ".concat(_this.color, " circle with radius ").concat(_this.radius));
         };
         return _this;
     }
+    Object.defineProperty(Circle.prototype, "radius", {
+        get: function () {
+            return this._radius;
+        },
+        set: function (value) {
+            if (value <= 0) {
+                throw new Error("Radius must be positive");
+            }
+            this._radius = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Circle.prototype.calculateArea = function () {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * this._radius * this._radius;
     };
     return Circle;
 }(Shape));
 var circle = new Circle("red", 5);
 console.log(circle.calculateArea());
-circle.displayArea();
-//* Practice Time
-//? You need to do the same for Square and Rectangle and if possible use getter and setter methods
-//? members
