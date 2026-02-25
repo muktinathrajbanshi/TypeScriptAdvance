@@ -12,3 +12,20 @@
 
 //* same Interface name treated as one
 
+type Student = {
+    name: string;
+    age: number;
+};
+
+type StudentAddress = {
+    city: string;
+    state: string;
+};
+
+const Biodata: Student | StudentAddress = {
+    name: "muktinath",
+    city: "KTM",
+    state: "Bagmati"
+}
+
+console.log(Biodata);
